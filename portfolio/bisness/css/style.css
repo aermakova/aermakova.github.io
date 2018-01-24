@@ -328,7 +328,7 @@ header nav >ul >li ul li a{
 	transform: rotate(-45deg);
 }
 
-.triggers ul li a a:hover{
+.triggers ul li a:hover{
 	text-decoration: underline;
 }
 
@@ -1282,6 +1282,11 @@ footer .footer_top .links{
 
 footer .footer_top .links ul li{
 	margin-bottom: 11px;
+	cursor: pointer;
+}
+
+footer .footer_top .links ul li:hover{
+	text-decoration: underline;
 }
 
 footer .footer_top .links .links_explore{
