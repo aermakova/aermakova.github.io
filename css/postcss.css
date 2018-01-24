@@ -1,4 +1,4 @@
-@import url('fonts/raleway-medium.css');
+
 @import url('fonts/raleway-light.css');
 @import url('fonts/roboto-bold.css');
 
@@ -41,7 +41,7 @@ header{
 			vertical-align: top;
 
 			a{
-				font-family: 'raleway-medium';
+				font-family: 'Raleway', sans-serif;
 				font-size: 20px;
 				color: #fff;
 				text-decoration: none;
@@ -64,7 +64,7 @@ header{
 			vertical-align: top;
 
 			a{
-				font-family: 'raleway-medium';
+				font-family: 'Raleway', sans-serif;
 				font-size: 14px;
 				color: #fff;
 				padding: 5px 5px;
@@ -84,9 +84,9 @@ header{
     }
 
     .main{
+    	font-family: 'Raleway', sans-serif;
 	    padding: 100px 0 0 0;
 		text-align: center;
-		font-family: 'raleway-medium';
 		color: #fff;
 
 		.main_img{
