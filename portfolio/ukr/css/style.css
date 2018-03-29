@@ -732,6 +732,7 @@ body{
 
 .phone-wrap span{
 	position: relative;
+	margin-left: 2px;
 }
 
 .phone-wrap span:before{
