@@ -13,7 +13,7 @@ var mySettings = {
         } 
         else {
             mySettings.dropBlock.slideUp();
-            $(this).delay(400).queue(function(nextJ){
+            $(this).delay(600).queue(function(nextJ){
                 $(this).removeClass("active");
                 nextJ();
             });
@@ -24,7 +24,7 @@ var mySettings = {
         var selectResult = $(this).html();
         $(this).parent().parent().find('input').val(selectResult);
         mySettings.dropBlock.slideUp();             
-        mySettings.virtualSelect.delay(400).queue(function(nextJs){
+        mySettings.virtualSelect.delay(600).queue(function(nextJs){
             $(this).removeClass("active");
             nextJs();
         }).html(selectResult);
@@ -33,7 +33,7 @@ var mySettings = {
     $(document).click(function(event) {
         if(mySettings.key && !$(event.target).closest(mySettings.dropBlock).length){
             mySettings.dropBlock.slideUp();
-            mySettings.virtualSelect.delay(400).queue(function(nextJs){
+            mySettings.virtualSelect.delay(600).queue(function(nextJs){
                 $(this).removeClass("active");
                 nextJs();
             });
@@ -57,7 +57,7 @@ var mySettings = {
         } 
         else {
             mySettingsPhone.dropPhone.slideUp();
-            $(this).delay(100).queue(function(nextJ){
+            $(this).delay(600).queue(function(nextJ){
                 $(this).removeClass("active");
                 nextJ();
             });
@@ -68,7 +68,7 @@ var mySettings = {
         var selectResult = $(this).html();
         $(this).parent().parent().find('input').val(selectResult);
         mySettingsPhone.dropPhone.slideUp();             
-        mySettingsPhone.virtualSelectPhone.delay(100).queue(function(nextJs){
+        mySettingsPhone.virtualSelectPhone.delay(600).queue(function(nextJs){
             $(this).removeClass("active");
             nextJs();
         }).html(selectResult);
@@ -77,7 +77,7 @@ var mySettings = {
     $(document).click(function(event) {
         if(mySettingsPhone.key && !$(event.target).closest(mySettingsPhone.dropPhone).length){
             mySettingsPhone.dropPhone.slideUp();
-            mySettingsPhone.virtualSelectPhone.delay(100).queue(function(nextJs){
+            mySettingsPhone.virtualSelectPhone.delay(600).queue(function(nextJs){
                 $(this).removeClass("active");
                 nextJs();
             });

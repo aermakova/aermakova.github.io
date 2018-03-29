@@ -535,6 +535,10 @@ body{
 	padding-left: 2px;
 }
 
+.drop li span{
+	top: 6px;
+}
+
 .drop li:hover {
 	background: #5c83b4;
 }
@@ -599,6 +603,7 @@ body{
 
 .phone-wrap span{
 	position: relative;
+	margin-left: 2px;
 	&:before{
     	content: '';
 	    position: absolute;
@@ -710,6 +715,186 @@ body{
 	background-image: url(../img/ico/ico-password.png) no-repeat;
 	background-position-image: 10px;
 	background-size-image: 70%;
+}
+
+.restoring-block{
+	text-align: center;
+	.search{
+		display: none;
+	}
+}
+
+.restoring_page{
+	min-height: calc(100vh - 65px);
+	max-height: 100%;
+	background: url(../img/background_password.jpg) no-repeat center;
+	background-size: cover;
+	padding-top: 60px;
+}
+
+.restoring{
+	height: 350px;
+	border: 4px solid #fff;
+	color: #fff;
+	text-align: center;
+	padding-top: 15px;
+	&:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 0;
+		display: block;
+		background: url(../img/ico/backg-restoring.png) no-repeat center;
+		background-size:cover;
+		width: 100%;
+		height: 100%;
+	}
+	&_title{
+		font-weight: 600;
+		font-size: 24px;
+		position: relative;
+		line-height: 31px;
+	}
+	&_text{
+		display: inline-block;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 21px;
+		&:before{
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background: #fff;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			display: block;
+		}
+	}
+	&_block{
+		padding-top: 20px;
+	}
+	&_item{
+		width: 130px;
+		height: 110px;
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+		margin: 40px;
+		a{
+			width: 130px;
+			height: 110px;
+			display: block;
+			text-decoration: none;
+			z-index: 1;
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				display: block;
+				background: url(../img/ico/ico-background.png) no-repeat center;
+				background-size: contain;
+				width: 100%;
+				height: 100%;
+				transition: .4s;
+			}
+			&:after {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				display: block;
+				width: 90px;
+    			height: 70px;
+				transition: .4s;
+			}
+			&:hover{
+				&:before{
+					background-image: url(../img/ico/ico-background1.png);
+				}
+				span{
+					color: #49678d;
+				}
+			}
+			span{
+				position: absolute;
+    			top: 115px;
+    			transition: .4s;
+    			color: #fff;
+    			font-size: 24px;
+    			font-weight: 600;
+    			left: 0;
+    			right: 0;
+    			margin: auto;
+    			line-height: 26px;
+			}
+		}
+		.ico_restoring_personal{
+			&:after{
+				background: url(../img/ico/ico-restoring-page1.png) no-repeat center;
+				background-size: contain;
+			}
+			&:hover{
+				&:after{
+					background-image: url(../img/ico/ico-restoring-page1-1.png);
+				}
+			}
+		}
+		.ico_restoring_phone{
+			&:after{
+				background: url(../img/ico/ico-restoring-page2.png) no-repeat center;
+				background-size: contain;
+			}
+			&:hover{
+				&:after{
+					background-image: url(../img/ico/ico-restoring-page2-2.png);
+				}
+			}
+		}
+		.ico_restoring_mail{
+			&:after{
+				background: url(../img/ico/ico-restoring-page3.png) no-repeat center;
+				background-size: contain;
+			}
+			&:hover{
+				&:after{
+					background-image: url(../img/ico/ico-restoring-page3-3.png);
+				}
+			}
+		}
+		.ico_restoring_login{
+			&:after{
+				background: url(../img/ico/ico-restoring-page4.png) no-repeat center;
+				background-size: contain;
+			}
+			&:hover{
+				&:after{
+					background-image: url(../img/ico/ico-restoring-page4-4.png);
+				}
+			}
+		}
+		.ico_restoring_profile{
+			&:after{
+				background: url(../img/ico/ico-restoring-page5.png) no-repeat center;
+				background-size: contain;
+			}
+			&:hover{
+				&:after{
+					background-image: url(../img/ico/ico-restoring-page5-5.png);
+				}
+			}
+		}
+	}
 }
 
 .footer{
