@@ -4,6 +4,7 @@
 body{
 	font-family: 'opensans';
 	font-size: 14px;
+	overflow-y: none!important;
 }
 
 body a{
@@ -888,10 +889,6 @@ footer .footer_adress:before{
 
 footer .footer_adress p{
 	line-height: 16px;
-}
-
-.mfp-wrap{
-	overflow-y: none!important;
 }
 
 .white-popup {
