@@ -33,6 +33,7 @@ $(function(){
         removalDelay: 350,
         mainClass: 'mfp-fade',
         fixed: false,
-        autoCenter: true
+        autoCenter: true,
+        fixedContentPos: false
     });
 });

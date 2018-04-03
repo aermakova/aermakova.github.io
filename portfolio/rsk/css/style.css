@@ -111,15 +111,13 @@ header nav .dropdown_menu ul{
 	z-index: -1;
 	top: 0;
 	background: #0070af;
-	-webkit-transition: all .4s ease;
-	transition: all .4s ease;
-	visibility: hidden;
-	opacity: 0;
+	-webkit-transition: .4s;
+	transition: .4s;
+	display: none;
 }
 
 header nav .dropdown_menu ul.active{
-	opacity: 1;
-	visibility: visible;
+	display: block;
 }
 
 header .logo{
