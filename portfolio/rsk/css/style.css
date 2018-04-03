@@ -890,6 +890,10 @@ footer .footer_adress p{
 	line-height: 16px;
 }
 
+.mfp-wrap{
+	overflow-y: none!important;
+}
+
 .white-popup {
     position: relative;
     background: #FFF;
