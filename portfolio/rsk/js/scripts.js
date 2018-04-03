@@ -17,6 +17,8 @@ $(function(){
     $('.popup-content').magnificPopup({
         type: 'inline',
         removalDelay: 350,
-        mainClass: 'mfp-fade'
+        mainClass: 'mfp-fade',
+        fixed: false,
+        autoCenter: true
     });
 });
