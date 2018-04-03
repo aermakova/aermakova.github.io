@@ -890,5 +890,40 @@ footer .footer_adress p{
 	line-height: 16px;
 }
 
+.white-popup {
+    position: relative;
+    background: #FFF;
+    width: 400px;
+    height: 500px;
+    margin: 20px auto;
+}
 
+.mfp-fade.mfp-bg{
+	opacity: 0;
+	background: #000;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+
+.mfp-fade.mfp-bg.mfp-ready{
+	opacity: .9;
+}
+
+.mfp-fade.mfp-bg.mfp-removing{
+	opacity: 0;
+}
+
+.mfp-fade.mfp-wrap .mfp-content{
+	opacity: 0;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content{
+	opacity: 1;
+}
+
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content{
+	opacity: 0;
+}
 

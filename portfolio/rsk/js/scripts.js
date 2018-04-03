@@ -14,4 +14,9 @@ $(function(){
             $(this).addClass('active').siblings().removeClass('active');
         });
 	});
+    $('.popup-content').magnificPopup({
+        type: 'inline',
+        removalDelay: 350,
+        mainClass: 'mfp-fade'
+    });
 });
