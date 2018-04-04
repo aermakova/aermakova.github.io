@@ -4,6 +4,7 @@
 
 body{
 	font-family: 'opensans';
+	-webkit-text-size-adjust: 100%;
 }
 
 
