@@ -1,6 +1,10 @@
 @import url('fonts/opensans.css');
 @import url('fonts/opensans-bold.css');
 
+html *{
+	max-height: 999999px;
+}
+
 body{
 	font-family: 'opensans';
 }
