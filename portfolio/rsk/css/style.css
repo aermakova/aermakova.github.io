@@ -1,18 +1,16 @@
 @import url('fonts/opensans.css');
 @import url('fonts/opensans-bold.css');
 
-html *{
-	max-height: 999999px;
-}
 
 body{
 	font-family: 'opensans';
-	-webkit-text-size-adjust: 100%;
 }
+
 
 body a{
 	text-decoration: none;
 }
+
 
 body h2{
 	font-size: 24px;
@@ -137,7 +135,7 @@ header nav .dropdown_menu:hover{
 header nav .dropdown_menu ul{
 	position: absolute;
 	left: 180px;
-	width: 240px;
+	width: 270px;
 	padding-left: 25px;
 	z-index: -1;
 	top: 0;
@@ -359,6 +357,7 @@ header .logo img{
 }
 
 .stock p{
+	font-size: 24px;
 	line-height: 30px;
 	letter-spacing: 0.7px;
 }
@@ -380,6 +379,7 @@ header .logo img{
 	padding: 46px 10px 50px 10px;
 	text-align: center;
 	height: 340px;
+	width: 270px;
 }
 
 .ads li:first-child{
@@ -399,6 +399,7 @@ header .logo img{
 	color: #fff;
 	line-height: 30px;
 	letter-spacing: 0.7px;
+	display: block;
 }
 
 .ads li .main_button{
@@ -977,7 +978,7 @@ header .logo img{
 
 .about_galery a{
 	width: 32.5%;
-	height: 178px;
+	height: 182px;
 	display: none;
 	border: 3px solid transparent;
 	margin-left: -3px;
@@ -1077,6 +1078,7 @@ header .logo img{
 .about_command .top_line{
 	background: #1c3047;
 	padding: 15px 0;
+	height: 88px;
 }
 
 .about_command .top_line .center{
@@ -1131,7 +1133,7 @@ header .logo img{
 }
 
 .command_item{
-	width: 480px;
+	width: 470px;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -1298,16 +1300,35 @@ header .logo img{
 	padding-top: 20px;
 	display: block;
 	margin: 20px auto;
+	position: relative;
 }
 
 .main_contractor a:hover{
 	border-color: #fff;
 	-webkit-transition: .4s;
 	transition: .4s;
+	box-shadow: 6px 6px 17px -4px rgba(0, 0, 0, 4);
+}
+
+.main_contractor a:after{
+	content: '';
+	width: 780px;
+	height: 1px;
+	background: #fff;
+	border-top: 1px solid #ebf4ff;
+	border-bottom: 1px solid #ebf4ff;
+	position: absolute;
+	bottom: -30px;
+	left: -230px;
+	box-shadow: 6px 6px 17px -4px rgba(0, 0, 0, 1);
+}
+
+.main_contractor .contractor_text{
+	padding-top: 30px;
 }
 
 .contractor_advantages{
-	padding-top: 20px;
+	padding-top: 25px;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
