@@ -3,7 +3,6 @@
 
 body{
 	font-family: 'opensans';
-	font-size: 14px;
 }
 
 body a{
@@ -12,6 +11,11 @@ body a{
 
 body h2{
 	font-size: 24px;
+}
+
+p{
+	font-size: 14px;
+	display: inline-block;
 }
 
 img{
@@ -50,7 +54,7 @@ img{
 
 header{
 	background: url(../img/header-backgr.png) no-repeat top center;
-	height: 108px;
+	height: 52px;
 	position: fixed;
 	top: 0;
     left: 0;
@@ -150,6 +154,18 @@ header .logo{
 	top: -12px;
 }
 
+header .logo:after{
+	content: '';
+	width: 447px;
+	height: 54px;
+	position: absolute;
+	background: url(../img/header-backgr2.png) no-repeat top center;
+	background-size: contain;
+	left: -162px;
+	bottom: -7px;
+	z-index: -1;
+}
+
 header .logo img{
 	max-width: 100%;
 }
@@ -185,6 +201,12 @@ header .logo img{
 	top: 1px;
 }
 
+.breadcrumbs ul li a:hover{
+	text-decoration: none;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
 .breadcrumbs ul li a.current_crumb{
 	color: #a26f62;
 	text-decoration: underline;
@@ -192,10 +214,6 @@ header .logo img{
 
 .breadcrumbs ul li a.current_crumb:after{
 	display: none;
-}
-
-.breadcrumbs ul li:hover{
-	text-decoration: none;
 }
 
 .ads_stock{
@@ -911,6 +929,10 @@ header .logo img{
 	padding-bottom: 80px;
 }
 
+.about_block{
+	padding-top: 30px;
+}
+
 .about_block .about_img{
 	width: 380px;
 	height: 250px;
@@ -992,13 +1014,17 @@ header .logo img{
 .about_data .top_line .center:after{
 	background: #1c3047;
 	left: -11px;
-	top: -5px;
+	top: -3px;
 	border-top: 0px;
 	border-left: 0px;
 }
 
 .about_data .info_block_buttons{
-	max-height: 888px;
+	max-height: 884px;
+}
+
+.about_data .info_block_buttons .info_buttons .info_button_item{
+	cursor: default;
 }
 
 .about_data .info_block_buttons .info_buttons .info_button_item:nth-child(even){
@@ -1012,8 +1038,16 @@ header .logo img{
 	margin-top: -107px;
 }
 
+.about_data .info_block_buttons .info_buttons .info_button_item:hover{
+	background: #a26f62;
+}
+
+.about_data .info_block_buttons .info_buttons .info_button_item ins{
+	padding-top: 22px;
+}
+
 .about_data .info_block_desc{
-	max-height: 888px;
+	max-height: 884px;
 	padding-top: 110px;
 }
 
@@ -1025,6 +1059,14 @@ header .logo img{
 	text-align: justify;
 	color: #1c3047;
 	padding-top: 20px;
+}
+
+.text{
+	font-size: 14px;
+	padding: 0 100px;
+	color: #1c3047;
+	line-height: 17px;
+	margin-bottom: 15px;
 }
 
 .about_command .top_line{
@@ -1039,7 +1081,7 @@ header .logo img{
 .about_command .top_line .center:after{
 	content: '';
 	position: absolute;
-	left: 114px;
+	left: 116px;
 	top: -105px;
 	width: 180px;
 	height: 180px;
@@ -1059,12 +1101,13 @@ header .logo img{
 }
 
 .about_command .command_block{
-	padding: 88px 0;
+	padding: 88px 0 20px 0;
 }
 
 .about_command .command_block h3{
 	font-size: 24px;
 	color: #1c3047;
+	padding-bottom: 50px;
 }
 
 .about_command .command_block .department{
@@ -1094,7 +1137,7 @@ header .logo img{
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 	margin-right: 19px;
-	margin-bottom: 60px;
+	margin-bottom: 50px;
 }
 
 .command_item:nth-child(even){
@@ -1107,6 +1150,51 @@ header .logo img{
 
 .command_item .command_item_info{
 	width: 50%;
+	padding: 20px 0 0 20px;
+}
+
+.command_item .command_item_info p, .command_item .command_item_info a{
+	font-family: 'opensans-bold';
+	font-size: 14px;
+	color: #1c3047;
+	line-height: 17px;
+	padding: 5px 0;
+}
+
+.command_item .command_item_info span{
+	color: #1c3047;
+	font-size: 11px;
+	font-style: italic;
+	display: block;
+	line-height: 13px;
+	padding: 5px 0;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.command_item .command_item_info span:after{
+	content: '';
+	width: 180px;
+	height: 1px;
+	background: #a26f62;
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+	margin: auto;
+}
+
+.command_item .command_item_info a{
+	display: block;
+}
+
+.command_item .command_item_mail{
+	text-decoration: underline;
+}
+
+.command_item .command_item_mail:hover{
+	text-decoration: none;
+	-webkit-transition: .4s;
+	transition: .4s;
 }
 
 .about_download{
@@ -1167,6 +1255,114 @@ header .logo img{
 
 #about_map{
 	height: 440px;
+}
+
+.general_contractor{
+	padding-bottom: 15px;
+}
+
+.general_contractor h2{
+	margin-bottom: 25px;
+}
+
+.main_contractor{
+	background: url(../img/about/contractor/background-1.jpg) no-repeat center;
+	background-size: cover;
+	padding: 120px 0;
+	text-align: center;
+}
+
+.main_contractor h2{
+	font-family: 'opensans-bold';
+	color: #fff;
+	margin-bottom: 10px;
+}
+
+.main_contractor p{
+	color: #fff;
+}
+
+.main_contractor a{
+	width: 320px;
+	height: 65px;
+	color: #fff;
+	border: 3px solid transparent;
+	background: #a26f62;
+	font-size: 14px;
+	line-height: 17px;
+	padding-top: 20px;
+	display: block;
+	margin: 20px auto;
+}
+
+.main_contractor a:hover{
+	border-color: #fff;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.contractor_advantages{
+	padding-top: 20px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: -moz-box;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+.contractor_advantages li{
+	width: 30%;
+	text-align: center;
+}
+
+.contractor_advantages li i{
+	width: 135px;
+	height: 150px;
+	display: block;
+	margin: 20px auto;
+}
+
+.contact_contractor{
+	text-align: center;
+	padding: 50px 0;
+}
+
+.contact_contractor h2{
+	margin-bottom: 20px;
+}
+
+.contact_contractor .contact_block{
+	padding: 20px 0;
+	width: 460px;
+	border-top: 1px solid #1c3047;
+	border-bottom: 1px solid #1c3047;
+	margin: auto;
+	text-align: center;
+}
+
+.contact_contractor p{
+	display: block;
+	line-height: 17px;
+}
+
+.contact_contractor p a, .contact_contractor p span{
+	font-family: 'opensans-bold';
+	color: #1c3047;
+	line-height: 17px;
+}
+
+.contact_contractor p .contractor_mail{
+	text-decoration: underline;
+}
+
+.contact_contractor p .contractor_mail:hover{
+	text-decoration: none;
+	-webkit-transition: .4s;
+	transition: .4s;
 }
 
 .tags{
@@ -1307,7 +1503,6 @@ footer .footer_adress p{
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content{
 	opacity: 0;
 }
-
 .gm-style-mtc, .gm-fullscreen-control, .gm-style-cc{
 	display: none;
 }
