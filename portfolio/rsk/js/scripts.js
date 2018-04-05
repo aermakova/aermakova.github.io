@@ -47,130 +47,60 @@ $(function(){
     });
 });
 
-function initMap(){
-    var element = document.getElementById('about_map');
-    var options = {
-        zoom: 15,
-        center: {lat: 45.116715, lng: 39.011362},
-        styles: [
-            {elementType: 'geometry', stylers: [{color: '#f8f4e3'}]},
-            {elementType: 'labels.text.stroke', stylers: [{color: '#f8f4e3'}]},
-            {elementType: 'labels.text.fill', stylers: [{color: '#2b2b2a'}]},
-            {
-              featureType: 'administrative.locality',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#2b2b2a'}]
-            },
-            {
-              featureType: 'poi',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#2b2b2a'}]
-            },
-            {
-              featureType: 'poi.park',
-              elementType: 'geometry',
-              stylers: [{color: '#e7e7e8'}]
-            },
-            {
-              featureType: 'poi.park',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#2b2b2a'}]
-            },
-            {
-              featureType: 'road',
-              elementType: 'geometry',
-              stylers: [{color: '#fcf0b1'}]
-            },
-            {
-              featureType: 'road',
-              elementType: 'geometry.stroke',
-              stylers: [{color: '#ecca83'}]
-            },
-            {
-              featureType: 'road',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#2b2b2a'}]
-            },
-            {
-              featureType: 'road.highway',
-              elementType: 'geometry',
-              stylers: [{color: '#fff'}]
-            },
-            {
-              featureType: 'road.highway',
-              elementType: 'geometry.stroke',
-              stylers: [{color: '#ebc982'}]
-            },
-            {
-              featureType: 'road.highway',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#fff'}]
-            },
-            {
-              featureType: 'transit',
-              elementType: 'geometry',
-              stylers: [{color: '#2f3948'}]
-            },
-            {
-              featureType: 'transit.station',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#d59563'}]
-            },
-            {
-              featureType: 'water',
-              elementType: 'geometry',
-              stylers: [{color: '#b5d2e4'}]
-            },
-            {
-              featureType: 'water',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#b5d2e4'}]
-            },
-            {
-              featureType: 'water',
-              elementType: 'labels.text.stroke',
-              stylers: [{color: '#b5d2e4'}]
-            }
-
-        ],
-    };
-
-    var myMap = new google.maps.Map(element, options);
-
-    var markers = [
-        {
-            coordinates: {lat: 45.116273, lng: 39.029032},
-            image: 'img/about/marker-2.png',
-            info: '<h5>ЖК “КАЛИНИНО ПАРК”</h5>'
+ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [45.11661589, 39.01136908],
+            zoom: 15,
+            controls: []
+        }, {
+            searchControlProvider: 'yandex#search'
         },
-        {
-            coordinates: {lat: 45.116890, lng: 38.997613},
-            image: 'img/about/marker-1.png',
-            info: '<h5>OФИС КОМПАНИИ “РСК”</h5>'
-        }
-    ];
+            {suppressMapOpenBlock: true}
+        ),
 
-    for (var i = 0; i < markers.length; i++) {
-        addMarker(markers[i]);
-    }
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
 
-    function addMarker(properties){
+        myPlacemark = new ymaps.Placemark([45.11690961, 38.99750725], {
+            hintContent: 'Адрес компании РСК',
+            balloonContent: 'Адрес компании РСК'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/about/marker-1.png',
+            // Размеры метки.
+            iconImageSize: [46, 76],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-5, -38]
+        }),
 
-        var marker = new google.maps.Marker({
-            position: properties.coordinates,
-            map: myMap,
+        myPlacemarkWithContent = new ymaps.Placemark([45.11621007, 39.02903250], {
+            hintContent: 'Адрес ЖК “Калинино Парк”',
+            balloonContent: 'Адрес ЖК “Калинино Парк”',
+            iconContent: '12'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#imageWithContent',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/about/marker-2.png',
+            // Размеры метки.
+            iconImageSize: [46, 76],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-24, -24],
+            // Смещение слоя с содержимым относительно слоя с картинкой.
+            iconContentOffset: [15, 15],
+            // Макет содержимого.
+            iconContentLayout: MyIconContentLayout
         });
 
-        if(properties.image){
-            marker.setIcon(properties.image);
-        }
-        if(properties.info){
-            var InfoWindow = new google.maps.InfoWindow({
-            content: properties.info
-            });
-            marker.addListener('click', function(){
-                InfoWindow.open(myMap, marker);
-            })
-        }
-    }
-}
+    myMap.geoObjects
+        .add(myPlacemark)
+        .add(myPlacemarkWithContent);
+});
