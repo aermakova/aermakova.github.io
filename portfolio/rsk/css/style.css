@@ -121,6 +121,13 @@ header nav li{
 	padding-left: 10px;
 }
 
+header nav li:nth-child(3) ul{
+	padding-left: 5px;
+	padding-bottom: 13px;
+	width: 155px;
+	left: 200px;
+}
+
 header nav a{
 	display: block;
 	text-decoration: none;
@@ -137,9 +144,9 @@ header nav .dropdown_menu:hover{
 
 header nav .dropdown_menu ul{
 	position: absolute;
-	left: 180px;
-	width: 250px;
-	padding-left: 25px;
+	left: 200px;
+	width: 230px;
+	padding-left: 5px;
 	z-index: -1;
 	top: 0;
 	background: #0070af;
@@ -184,7 +191,7 @@ header .logo img{
 }
 
 .breadcrumbs{
-	padding: 72px 0 25px 0;
+	padding: 72px 0 30px 0;
 }
 
 .breadcrumbs ul li{
@@ -197,6 +204,7 @@ header .logo img{
 	text-decoration: underline;
 	position: relative;
 	padding: 0 20px 0 0;
+	font-size: 14px;
 }
 
 .breadcrumbs ul li a:after{
@@ -220,6 +228,58 @@ header .logo img{
 
 .breadcrumbs ul li a.current_crumb:after{
 	display: none;
+}
+
+.zk_breadcrumbs{
+	padding-top: 90px;
+}
+
+.zk_sub_menu{
+	position: absolute;
+	top: 50px;
+	width: 100%;
+}
+
+.zk_sub_menu ul{
+	height: 28px;
+	padding-left: 10px;
+	position: relative;
+}
+
+.zk_sub_menu ul:after{
+	content: '';
+	position: absolute;
+	height: 29px;
+	width: 676px;
+	left: -20px;
+	background: url(../img/zk/sub_menu-backgr.png) no-repeat left;
+	background-size: contain;
+	z-index: -1;
+}
+
+.zk_sub_menu ul li{
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0 5px;
+	line-height: 27px;
+}
+
+.zk_sub_menu ul li a{
+	display: inline-block;
+	font-size: 14px;
+	line-height: 17px;
+	color: #fff;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.zk_sub_menu ul li a:hover{
+	text-decoration: underline;
+}
+
+.zk_sub_menu ul li .current_sub_menu{
+	font-family: 'opensans-bold';
+	text-decoration: underline;
 }
 
 .ads_stock{
@@ -1420,7 +1480,7 @@ header .logo img{
 	position: absolute;
 	bottom: -30px;
 	left: -230px;
-	box-shadow: 6px 6px 17px -4px rgba(0, 0, 0, 1);
+	box-shadow: 6px 6px 17px -4px rgba(0, 0, 0, 4);
 }
 
 .main_contractor .contractor_text{
@@ -1489,6 +1549,469 @@ header .logo img{
 	text-decoration: none;
 	-webkit-transition: .4s;
 	transition: .4s;
+}
+
+.zk_apartment_option h2{
+	margin-bottom: 20px;
+}
+
+.zk_apartment_option_block{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: -moz-box;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+}
+
+.zk_apartment_option_block .zk_apartment_item_wrap:first-child .zk_apartment_option_title{
+	padding-top: 10px;
+}
+
+.zk_apartment_option_block .zk_apartment_item_wrap{
+	width: 22%;
+	margin-bottom: 20px;
+}
+
+.zk_apartment_option_block .zk_apartment_item_wrap .zk_apartment_option_title{
+	font-size: 18px;
+	color: #a26f62;
+	text-transform: uppercase;
+	line-height: 21px;
+	height: 50px;
+	text-align: center;
+}
+
+.zk_apartment_option_block .zk_apartment_item_wrap .zk_apartment_option_item{
+	width: 100%;
+	text-align: center;
+	padding-top: 10px;
+}
+
+.zk_apartment_option_block .zk_apartment_item_wrap .zk_apartment_option_item li{
+	text-align: center;
+}
+
+.zk_apartment_option_block .zk_apartment_item_wrap .zk_apartment_option_item li .option_item_img{
+	width: 175px;
+	height: 160px;
+	position: relative;
+	margin: auto;
+}
+
+.zk_apartment_option_block .zk_apartment_item_wrap .zk_apartment_option_item li .option_item_img img{
+	max-width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.zk_apartment_option_block .zk_apartment_item_wrap .zk_apartment_option_item li .option_item_desc{
+	text-align: left;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+.zk_apartment_option_block .zk_apartment_item_wrap .zk_apartment_option_item li .option_item_desc p{
+	line-height: 17px;
+	font-size: 14px;
+}
+
+.zk_apartment_option_block .current_apartment_item .zk_apartment_option_title{
+	color: #1c3047;
+}
+
+.zk_apartment_option_block .current_apartment_item .option_button{
+	display: none;
+}
+
+.zk_apartment_plans{
+	padding-top: 20px;
+	margin-bottom: 20px;
+}
+
+.zk_apartment_plans .zk_apartment_plans_tabs{
+	padding-top: 30px;
+}
+
+.zk_apartment_plans .zk_apartment_plans_tabs .zk_apartment_plans_tab{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: -moz-box;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.zk_apartment_plans .zk_apartment_plans_tabs .zk_apartment_plans_tab li{
+	text-align: center;
+	width: 115px;
+	padding: 10px 5px;
+	background: #198fc9;
+	color: #1c3047;
+	cursor: pointer;
+	font-size: 14px;
+}
+
+.zk_apartment_plans .zk_apartment_plans_tabs .zk_apartment_plans_tab li span{
+	display: block;
+}
+
+.zk_apartment_plans .zk_apartment_plans_tabs .zk_apartment_plans_tab li.plan_passed{
+	background: #cca9a1;
+}
+
+.zk_apartment_plans .zk_apartment_plans_tabs .zk_apartment_plans_tab li:hover{
+	background: #1c3047;
+	color: #fff;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.zk_apartment_plans .zk_apartment_plans_tabs .zk_apartment_plans_tab li.active{
+	background: #1c3047;
+	color: #fff;
+}
+
+.zk_apartment_plans .zk_apartment_plans_tabs .zk_apartment_plans_block{
+	height: 370px;
+	width: 100%;
+	padding-top: 50px;
+}
+
+.zk_apartment_plans .zk_apartment_plans_tabs .zk_apartment_plans_block li{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	display: none;
+}
+
+.zk_apartment_plans .zk_apartment_plans_tabs .zk_apartment_plans_block li.active{
+	display: block;
+}
+
+.zk_apartment_plans .zk_apartment_plans_tabs .zk_apartment_plans_block li img{
+	position: absolute;
+	max-width: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+
+.option_button{
+	width: 150px;
+	height: 38px;
+	font-size: 14px;
+	line-height: 38px;
+	color: #fff;
+	background: #a26f62;
+	display: inline-block;
+}
+
+.option_button:hover{
+	background: #1c3047;
+	-webkit-transition: .6s;
+	transition: .6s;
+}
+
+.zk_apartment_slider{
+	padding-top: 50px;
+}
+
+.zk_apartment_slider h2{
+	margin-bottom: 20px;
+}
+.cascade-slider_container {
+    position: relative;
+    width: 100%;
+    height: 570px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.cascade-slider_slides{
+	width: 100%;
+	height: 100%;
+}
+
+.cascade-slider_item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-20%) translateX(-20%) scale(0.3);
+            transform: translateY(-20%) translateX(-20%) scale(0.3);
+    -webkit-transition: all .9s linear;
+    transition: all .9s linear;
+    opacity: 0;
+    z-index: -1;
+}
+
+.cascade-slider_item img{
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.cascade-slider_item .cascade-slider_desc{
+	position: absolute;
+	bottom: 137px;
+	left: 230px;
+}
+
+.cascade-slider_item .cascade-slider_desc p{
+	font-size: 24px;
+	color: #fff;
+	line-height: 30px;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 13px #000000;
+}
+
+.cascade-slider_item .cascade-slider_desc p span{
+	display: block;
+}
+
+.cascade-slider_item .cascade-slider_desc .option_button{
+	margin-top: 10px;
+	display: block;
+	text-align: center;
+	border: 1px solid #6a7786;
+	box-shadow: -1px 0px 0px -1px #fff, 0px 1px 0px 1px #fff;
+}
+
+.cascade-slider_item .cascade-slider_desc .option_button:hover{
+	box-shadow: none;
+	border: 0;
+}
+
+.cascade-slider_item.next {
+    left: 580px;
+    -webkit-transform: translateY(-50%) translateX(-150%) scale(0.9);
+            transform: translateY(-50%) translateX(-150%) scale(0.9);
+    opacity: 1;
+    z-index: 6;
+    border: 3px solid #a26f62;
+    box-shadow: 10px 10px 30px -2px rgba(0, 0, 0, .5);
+    width: 675px;
+    height: 335px;
+}
+
+.cascade-slider_item.next .cascade-slider_desc{
+	top: 50px;
+	left: 520px;
+}
+
+.cascade-slider_item.next .cascade-slider_desc .option_button{
+	display: none;
+}
+
+.cascade-slider_item.next .cascade-slider_desc p{
+	width: 130px;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.cascade-slider_item.prev {
+    left: 400px;
+    -webkit-transform: translateY(-50%) translateX(50%) scale(0.9);
+            transform: translateY(-50%) translateX(50%) scale(0.9);
+    opacity: 1;
+    z-index: 6;
+    border: 3px solid #a26f62;
+    box-shadow: 10px 10px 30px -2px rgba(0, 0, 0, .5);
+    width: 675px;
+    height: 335px;
+}
+
+.cascade-slider_item.prev .cascade-slider_desc{
+	top: 50px;
+	left: 75px;
+}
+
+.cascade-slider_item.prev .cascade-slider_desc .option_button{
+	display: none;
+}
+
+.cascade-slider_item.prev .cascade-slider_desc p{
+	width: 130px;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.cascade-slider_item.now {
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 570px;
+    -webkit-transform: translateY(-50%) translateX(-50%) scale(1);
+            transform: translateY(-50%) translateX(-50%) scale(1);
+    opacity: 1;
+    z-index: 5;
+}
+
+.cascade-slider_arrow {
+    display: inline-block;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 250px;
+    cursor: pointer;
+    z-index: 7;
+}
+
+.cascade-slider_arrow:hover{
+	background-color: #1c3047;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.cascade-slider_arrow-left {
+    left: 70px;
+    background: url(../img/zk/item/prev.png) #a26f62 no-repeat center;
+    background-size: 30%;
+}
+
+.cascade-slider_arrow-right {
+    right: 70px;
+    background: url(../img/zk/item/next.png) #a26f62 no-repeat center;
+    background-size: 30%;
+}
+
+.cascade-slider_nav {
+    display: none;
+}
+
+.zk_documents h2{
+	margin-bottom: 20px;
+}
+
+.zk_documents_block{
+	padding: 10px 60px 20px 60px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: -moz-box;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.zk_documents_block a{
+	width: 240px;
+	margin: 10px 0;
+}
+
+.zk_documents_block a i{
+	width: 32px;
+	height: 44px;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	background: transparent;
+}
+
+.zk_documents_block a i:after{
+	content: '';
+	width: 34px;
+	height: 46px;
+	background-image: url(../img/zk/ico-1.png);
+	background-size: contain;
+	background-color: transparent;
+	position: absolute;
+	top: -1px;
+	left: -1px;
+	right: -1px;
+	bottom: -1px;
+	margin: auto;
+	z-index: 0;
+}
+
+.zk_documents_block a p{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 14px;
+	color: #1c3047;
+	width: 205px;
+	padding-left: 10px;
+}
+
+.zk_documents_block a.documents_item_blue i:after{
+	background: url(../img/zk/ico-2.png) transparent no-repeat center;
+	background-size: contain;
+}
+
+.zk_documents_block a:hover i{
+	-webkit-transition: .4s;
+	transition: .4s;
+	box-shadow: 5px 5px 7px 0 rgba(162, 111, 68, .6);
+	background-color: rgba(162, 111, 68, .6);
+}
+
+.zk_documents_block a:hover p{
+	-webkit-transition: .4s;
+	transition: .4s;
+	color: #a26f62;
+}
+
+.zk_documents .old_documents_button{
+	width: 306px;
+	height: 38px;
+	line-height: 36px;
+	color: #fff;
+	background: #a26f62;
+	font-size: 14px;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+}
+
+.zk_documents .old_documents_button:hover{
+	-webkit-transition: .4s;
+	transition: .4s;
+	background: #1c3047;
+}
+
+.zk_documents_old{
+	padding-bottom: 30px;
+}
+
+.zk_photoreports{
+	height: 910px;
+	background: url(../img/zk/background.jpg) no-repeat center;
+	background-size: cover;
+	top: -85px;
+    padding-top: 140px;
+    position: relative;
+    z-index: -2;
+}
+
+.zk_photoreports .reports_video{
+	width: 100%;
+	height: 570px;
+	background: #a36f62;
+	border-radius: 10px;
+	position: relative;
+	z-index: 3;
+	padding: 40px;
 }
 
 .tags{
@@ -1634,4 +2157,18 @@ footer .footer_adress p{
 }
 .gm-style-mtc, .gm-fullscreen-control, .gm-style-cc{
 	display: none;
+}
+
+.zk_apartment_option_prev, .zk_apartment_option_next{
+	position: absolute;
+	top: 80px;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.zk_apartment_option_prev{
+    left: 0;
+}
+.zk_apartment_option_next{
+    right: 0;
 }
