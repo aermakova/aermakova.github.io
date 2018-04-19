@@ -11,14 +11,7 @@ $(function(){
         }
     });
 
-    $('nav li.dropdown_menu').hover(
-        function(){
-            $(this).find('ul').addClass('active').siblings().removeClass('active');;
-        }, function(){
-            $(this).find('ul').removeClass('active');
-    });
-
-    $('aside.info').each(function(){
+    $('.info').each(function(){
 		var $TabBlock = $('.info_desc_client div', this);
 		var $TabBtn = $('.info_buttons li', this);
  
@@ -46,6 +39,15 @@ $(function(){
         }
     });
 
+    $('.popup_news').magnificPopup({
+        type: 'inline',
+        removalDelay: 350,
+        mainClass: 'mfp-fade',
+        fixed: false,
+        autoCenter: true,
+        fixedContentPos: false
+    });
+
     $('.zk_apartment_option .zk_apartment_option_item').slick({
         dots: false,
         autoplay: false,
@@ -53,6 +55,55 @@ $(function(){
         slidesToScroll: 1,
         prevArrow: '<span class="zk_apartment_option_prev"><img src="img/zk/prev.png"></span>',
         nextArrow: '<span class="zk_apartment_option_next"><img src="img/zk/next.png"></span>'
+    });
+
+    $('.albums_wrap_with_arr').slick({
+        dots: false,
+        autoplay: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: false,
+        prevArrow: '<span class="albums_wrap_arr_prev"><img src="img/zk/photoreports/prev.png"></span>',
+        nextArrow: '<span class="albums_wrap_arr_next"><img src="img/zk/photoreports/next.png"></span>'
+    });
+
+    $('.zk_repair_item_example').slick({
+        dots: false,
+        autoplay: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        prevArrow: '<span class="zk_apartment_option_prev"><img src="img/zk/prev.png"></span>',
+        nextArrow: '<span class="zk_apartment_option_next"><img src="img/zk/next.png"></span>'
+    });
+
+    $('ul.liter_album_whith_arr').slick({
+        dots: false,
+        autoplay: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: false,
+        prevArrow: '<span class="liter_album_arr_prev liter_album_arr"></span>',
+        nextArrow: '<span class="liter_album_arr_next liter_album_arr"></span>'
+    });
+
+    $('.stock_apartment .zk_apartment_option_item').slick({
+        dots: false,
+        autoplay: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: '<span class="zk_apartment_option_prev"><img src="img/zk/prev.png"></span>',
+        nextArrow: '<span class="zk_apartment_option_next"><img src="img/zk/next.png"></span>'
+    });
+
+    $('.zk_infrast_info').each(function(){
+        var $TabBlock = $('.zk_infrast_block-js', this);
+        var $TabBtn = $('.zk_infrast_button-js', this);
+ 
+        $TabBtn.click(function(){
+            $TabBlock.eq($(this).index()).addClass('active').siblings().removeClass('active');
+            $(this).addClass('active').siblings().removeClass('active');
+        });
     });
 
     $('.zk_apartment_plans').each(function(){
@@ -65,104 +116,347 @@ $(function(){
         });
     });
 
+    $('.apartment_slider_container').each(function(){
+        var $li = $('.apartment_slider_item', this);
+        var $prev = $('.apartment_slider_arr_left', this);
+        var $next = $('.apartment_slider_arr_right', this);
+        var $now = $('.apartment_slider_item.now',this);
+        
+
+        $prev.click(function(){
+            var $li = $('.apartment_slider_item');
+            var index = $li.filter('.now').index();
+            if(index == 0){
+                index = $li.length
+            }
+            if(index == 1){
+                $li.eq(index-1).addClass('now').siblings().removeClass('now');
+                $li.eq($li.length-1).addClass('prev').siblings().removeClass('prev');
+                $li.eq(index).addClass('next').siblings().removeClass('next');
+
+            }else if(index == 0)
+            {
+                $li.eq($li.length-1).addClass('now').siblings().removeClass('now');
+                $li.eq(index).addClass('next').siblings().removeClass('next');
+                $li.eq($li.length-2).addClass('prev').siblings().removeClass('prev');
+
+            }else{
+                $li.eq(index-1).addClass('now').siblings().removeClass('now');
+                $li.eq(index-2).addClass('prev').siblings().removeClass('prev');
+                $li.eq(index).addClass('next').siblings().removeClass('next');
+            }
+        });
+
+        $next.click(function(){
+            var $li = $('.apartment_slider_item');
+            var index = $li.filter('.now').index();
+            if(index == $li.length-2){
+                $li.eq(index+1).addClass('now').siblings().removeClass('now');
+                $li.eq(index).addClass('prev').siblings().removeClass('prev');
+                $li.eq(0).addClass('next').siblings().removeClass('next');
+
+            }else if(index == $li.length-1)
+            {
+                $li.eq(0).addClass('now').siblings().removeClass('now');
+                $li.eq(1).addClass('next').siblings().removeClass('next');
+                $li.eq(index).addClass('prev').siblings().removeClass('prev');
+
+            }else{
+                $li.eq(index+1).addClass('now').siblings().removeClass('now');
+                $li.eq(index).addClass('prev').siblings().removeClass('prev');
+                $li.eq(index+2).addClass('next').siblings().removeClass('next');
+            }
+        });
+    });
+
+    $('.relocation_slider_reason1').each(function(){
+        var $li = $('.slider_reason1_item', this);
+        var $prev = $('.slider_reason1_arr_left', this);
+        var $next = $('.slider_reason1_arr_right', this);
+        var $now = $('.slider_reason1_item.now',this);
+        
+
+        $prev.click(function(){
+            var $li = $('.slider_reason1_item');
+            var index = $li.filter('.now').index();
+            if(index == 0){
+                index = $li.length
+            }
+            if(index == 1){
+                $li.eq(index-1).addClass('now').siblings().removeClass('now');
+                $li.eq($li.length-1).addClass('prev').siblings().removeClass('prev');
+                $li.eq(index).addClass('next').siblings().removeClass('next');
+
+            }else if(index == 0)
+            {
+                $li.eq($li.length-1).addClass('now').siblings().removeClass('now');
+                $li.eq(index).addClass('next').siblings().removeClass('next');
+                $li.eq($li.length-2).addClass('prev').siblings().removeClass('prev');
+
+            }else{
+                $li.eq(index-1).addClass('now').siblings().removeClass('now');
+                $li.eq(index-2).addClass('prev').siblings().removeClass('prev');
+                $li.eq(index).addClass('next').siblings().removeClass('next');
+            }
+        });
+
+        $next.click(function(){
+            var $li = $('.slider_reason1_item');
+            var index = $li.filter('.now').index();
+            if(index == $li.length-2){
+                $li.eq(index+1).addClass('now').siblings().removeClass('now');
+                $li.eq(index).addClass('prev').siblings().removeClass('prev');
+                $li.eq(0).addClass('next').siblings().removeClass('next');
+
+            }else if(index == $li.length-1)
+            {
+                $li.eq(0).addClass('now').siblings().removeClass('now');
+                $li.eq(1).addClass('next').siblings().removeClass('next');
+                $li.eq(index).addClass('prev').siblings().removeClass('prev');
+
+            }else{
+                $li.eq(index+1).addClass('now').siblings().removeClass('now');
+                $li.eq(index).addClass('prev').siblings().removeClass('prev');
+                $li.eq(index+2).addClass('next').siblings().removeClass('next');
+            }
+        });
+    });
+
+    $('.relocation_slider_reason2').each(function(){
+        var $li = $('.slider_reason2_item', this);
+        var $prev = $('.slider_reason2_arr_left', this);
+        var $next = $('.slider_reason2_arr_right', this);
+        var $now = $('.slider_reason2_item.now',this);
+        
+
+        $prev.click(function(){
+            var $li = $('.slider_reason2_item');
+            var index = $li.filter('.now').index();
+            if(index == 0){
+                index = $li.length
+            }
+            if(index == 1){
+                $li.eq(index-1).addClass('now').siblings().removeClass('now');
+                $li.eq($li.length-1).addClass('prev').siblings().removeClass('prev');
+                $li.eq(index).addClass('next').siblings().removeClass('next');
+
+            }else if(index == 0)
+            {
+                $li.eq($li.length-1).addClass('now').siblings().removeClass('now');
+                $li.eq(index).addClass('next').siblings().removeClass('next');
+                $li.eq($li.length-2).addClass('prev').siblings().removeClass('prev');
+
+            }else{
+                $li.eq(index-1).addClass('now').siblings().removeClass('now');
+                $li.eq(index-2).addClass('prev').siblings().removeClass('prev');
+                $li.eq(index).addClass('next').siblings().removeClass('next');
+            }
+        });
+
+        $next.click(function(){
+            var $li = $('.slider_reason2_item');
+            var index = $li.filter('.now').index();
+            if(index == $li.length-2){
+                $li.eq(index+1).addClass('now').siblings().removeClass('now');
+                $li.eq(index).addClass('prev').siblings().removeClass('prev');
+                $li.eq(0).addClass('next').siblings().removeClass('next');
+
+            }else if(index == $li.length-1)
+            {
+                $li.eq(0).addClass('now').siblings().removeClass('now');
+                $li.eq(1).addClass('next').siblings().removeClass('next');
+                $li.eq(index).addClass('prev').siblings().removeClass('prev');
+
+            }else{
+                $li.eq(index+1).addClass('now').siblings().removeClass('now');
+                $li.eq(index).addClass('prev').siblings().removeClass('prev');
+                $li.eq(index+2).addClass('next').siblings().removeClass('next');
+            }
+        });
+    });
+
+    $('.relocation_slider_reason3').each(function(){
+        var $li = $('.slider_reason3_item', this);
+        var $prev = $('.slider_reason3_arr_left', this);
+        var $next = $('.slider_reason3_arr_right', this);
+        var $now = $('.slider_reason3_item.now',this);
+        
+
+        $prev.click(function(){
+            var $li = $('.slider_reason3_item');
+            var index = $li.filter('.now').index();
+            if(index == 0){
+                index = $li.length
+            }
+            if(index == 1){
+                $li.eq(index-1).addClass('now').siblings().removeClass('now');
+                $li.eq($li.length-1).addClass('prev').siblings().removeClass('prev');
+                $li.eq(index).addClass('next').siblings().removeClass('next');
+
+            }else if(index == 0)
+            {
+                $li.eq($li.length-1).addClass('now').siblings().removeClass('now');
+                $li.eq(index).addClass('next').siblings().removeClass('next');
+                $li.eq($li.length-2).addClass('prev').siblings().removeClass('prev');
+
+            }else{
+                $li.eq(index-1).addClass('now').siblings().removeClass('now');
+                $li.eq(index-2).addClass('prev').siblings().removeClass('prev');
+                $li.eq(index).addClass('next').siblings().removeClass('next');
+            }
+        });
+
+        $next.click(function(){
+            var $li = $('.slider_reason3_item');
+            var index = $li.filter('.now').index();
+            if(index == $li.length-2){
+                $li.eq(index+1).addClass('now').siblings().removeClass('now');
+                $li.eq(index).addClass('prev').siblings().removeClass('prev');
+                $li.eq(0).addClass('next').siblings().removeClass('next');
+
+            }else if(index == $li.length-1)
+            {
+                $li.eq(0).addClass('now').siblings().removeClass('now');
+                $li.eq(1).addClass('next').siblings().removeClass('next');
+                $li.eq(index).addClass('prev').siblings().removeClass('prev');
+
+            }else{
+                $li.eq(index+1).addClass('now').siblings().removeClass('now');
+                $li.eq(index).addClass('prev').siblings().removeClass('prev');
+                $li.eq(index+2).addClass('next').siblings().removeClass('next');
+            }
+        });
+    });
+
+    $('.zk_repair_info').each(function(){
+        var $TabBlock = $('.zk_repair_info_wrap div', this);
+        var $TabBtn = $('.zk_repair_buttons li', this);
+ 
+        $TabBtn.click(function(){
+            $TabBlock.eq($(this).index()).addClass('active').siblings().removeClass('active');
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+    });
+
+    $('.client_payment').each(function(){
+        var $TabBlock = $('.client_payment_desc li', this);
+        var $TabBtn = $('.client_payment_buttons .client_payment_button-js', this);
+ 
+        $TabBtn.click(function(){
+            $TabBlock.eq($(this).index()).addClass('active').siblings().removeClass('active');
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+    });
+
+    var groups = {};
+    $('.photoreport_item_img').each(function() {
+        var id = parseInt($(this).attr('data-group'), 10);
+      
+        if(!groups[id]) {
+            groups[id] = [];
+        } 
+      
+        groups[id].push( this );
+    });
+
+    $.each(groups, function() {
+      
+        $(this).magnificPopup({
+            type: 'image',
+            closeOnContentClick: true,
+            closeBtnInside: false,
+            gallery: { enabled:true }
+        })
+    });
+
+    $('.zk_info_galery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        gallery: {
+            enabled: true,
+            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+        }
+    });
+
+    $('.repair_popup').magnificPopup({
+        type: 'inline',
+        removalDelay: 350,
+        mainClass: 'mfp-fade',
+        fixed: false,
+        autoCenter: true,
+        fixedContentPos: false
+    });
+
+    var groups = {};
+    $('.zk_liter_item_img').each(function() {
+        var id = parseInt($(this).attr('data-group'), 10);
+      
+        if(!groups[id]) {
+            groups[id] = [];
+        } 
+      
+        groups[id].push( this );
+    });
+
+    $.each(groups, function() {
+        $(this).magnificPopup({
+            type: 'image',
+            closeOnContentClick: true,
+            closeBtnInside: false,
+            gallery: { enabled:true }
+        })
+    });
+
+    $('.zk_liter').each(function(){
+        var $TabBlock = $('.zk_liter_block_wrap ul', this);
+        var $TabBtn = $('.zk_liter_tabs li', this);
+
+        setTimeout(function() { 
+            $TabBlock.hide().first().fadeIn();
+        }, 5);
+        setTimeout(function() { 
+            $TabBlock.first().fadeIn();
+        }, 0);
+ 
+        $TabBtn.click(function(){
+            $TabBlock.eq($(this).index()).fadeIn().siblings().hide();
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+    });
+
+    var groups = {};
+    $('.news_item_img').each(function() {
+        var id = parseInt($(this).attr('data-group'), 10);
+      
+        if(!groups[id]) {
+            groups[id] = [];
+        } 
+      
+        groups[id].push( this );
+    });
+
+    $.each(groups, function() {
+        $(this).magnificPopup({
+            type: 'image',
+            closeOnContentClick: true,
+            closeBtnInside: false,
+            gallery: { enabled:true }
+        })
+    });
 });
 
-(function($) {
-$.fn.cascadeSlider = function(opt) {
-    var $this = this,
-        itemClass = opt.itemClass || 'cascade-slider_item',
-        arrowClass = opt.arrowClass || 'cascade-slider_arrow',
-        $item = $this.find('.' + itemClass),
-        $arrow = $this.find('.' + arrowClass),
-        itemCount = $item.length;
-
-    var defaultIndex = 0;
-
-    changeIndex(defaultIndex);
-
-    $arrow.on('click', function() {
-        var action = $(this).data('action'),
-        nowIndex = $item.index($this.find('.now'));
-
-        if(action == 'next') {
-            if(nowIndex == itemCount - 1) {
-            changeIndex(0);
-            } else {
-            changeIndex(nowIndex + 1);
-            }
-        } else if (action == 'prev') {
-            if(nowIndex == 0) {
-            changeIndex(itemCount - 1);
-            } else {
-            changeIndex(nowIndex - 1);
-            }
-        }
-
-        $('.cascade-slider_dot').removeClass('cur');
-        //$('.cascade-slider_dot').next().addClass('cur');
-        });
-    
-        // add data attributes
-        for (var i = 0; i < itemCount; i++) {
-            $('.cascade-slider_item').each(function(i) {
-                $(this).attr('data-slide-number', [i]);
-            });
-        }
-    
-        // dots
-        $('.cascade-slider_dot').bind('click', function(){
-        // add class to current dot on click
-        $('.cascade-slider_dot').removeClass('cur');
-        $(this).addClass('cur');
-
-        var index = $(this).index();
-
-        $('.cascade-slider_item').removeClass('now prev next');
-        var slide = $('.cascade-slider_slides').find('[data-slide-number=' + index + ']');
-        slide.prev().addClass('prev');
-        slide.addClass('now');
-        slide.next().addClass('next');
-
-        if(slide.next().length == 0) {
-            $('.cascade-slider_item:first-child').addClass('next');
-        }
-
-        if(slide.prev().length == 0) {
-            $('.cascade-slider_item:last-child').addClass('prev');
-        }
-    });
-
-    function changeIndex(nowIndex) {
-        // clern all class
-        $this.find('.now').removeClass('now');
-        $this.find('.next').removeClass('next');
-        $this.find('.prev').removeClass('prev');
-        if(nowIndex == itemCount -1){
-            $item.eq(0).addClass('next');
-        }
-        if(nowIndex == 0) {
-            $item.eq(itemCount -1).addClass('prev');
-        }
-
-        $item.each(function(index) {
-            if(index == nowIndex) {
-            $item.eq(index).addClass('now');
-            }
-            if(index == nowIndex + 1 ) {
-            $item.eq(index).addClass('next');
-            }
-            if(index == nowIndex - 1 ) {
-            $item.eq(index).addClass('prev');
-            }
-        });
-    }
-};
-    $('#cascade-slider').cascadeSlider({
-    });
-
-})(jQuery);
-
+// ЯНДЕКС КАРТЫ
+var myMap4;
+var myMap3;
+var myMap2;
+var myMap;
 ymaps.ready(function () {
+    var el = $("#map").html();
+    var el2 = $("#zk_map").html();
+    var el3 = $("#zk_map3").html();
+    var el4 = $("#contact_map").html();
+    if (el != null) {  
+
     var myMap = new ymaps.Map('map', {
             center: [45.11661589, 39.01136908],
             zoom: 15,
@@ -178,7 +472,7 @@ ymaps.ready(function () {
             '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
         ),
 
-        myPlacemark = new ymaps.Placemark([45.11690961, 38.99750725], {
+        myPlacemark = new ymaps.Placemark([45.11698557, 38.99759308], {
             hintContent: 'Адрес компании РСК',
             balloonContent: 'Адрес компании РСК'
         }, {
@@ -191,10 +485,10 @@ ymaps.ready(function () {
             iconImageSize: [46, 76],
             // Смещение левого верхнего угла иконки относительно
             // её "ножки" (точки привязки).
-            iconImageOffset: [-5, -38]
+            iconImageOffset: [-25, -65]
         }),
 
-        myPlacemarkWithContent = new ymaps.Placemark([45.11621007, 39.02903250], {
+        myPlacemarkWithContent = new ymaps.Placemark([45.11662028, 39.02905396], {
             hintContent: 'Адрес ЖК “Калинино Парк”',
             balloonContent: 'Адрес ЖК “Калинино Парк”',
             iconContent: '12'
@@ -208,14 +502,282 @@ ymaps.ready(function () {
             iconImageSize: [46, 76],
             // Смещение левого верхнего угла иконки относительно
             // её "ножки" (точки привязки).
-            iconImageOffset: [-24, -24],
+            iconImageOffset: [-20, -65],
             // Смещение слоя с содержимым относительно слоя с картинкой.
-            iconContentOffset: [15, 15],
+            iconContentOffset: [0, 0],
             // Макет содержимого.
             iconContentLayout: MyIconContentLayout
         });
+      
+        myMap.geoObjects
+            .add(myPlacemark)
+            .add(myPlacemarkWithContent);
+    }
+    else if (el2 != null){
+        var myMap2 = new ymaps.Map('zk_map', {
+            center: [45.11635550, 39.02797804],
+            zoom: 15,
+            controls: []
+        }, {
+            searchControlProvider: 'yandex#search'
+        },
+            {suppressMapOpenBlock: true}
+        ),
 
-    myMap.geoObjects
-        .add(myPlacemark)
-        .add(myPlacemarkWithContent);
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+
+        myPlacemarkWithContent = new ymaps.Placemark([45.11662028, 39.02905396], {
+            hintContent: 'Адрес ЖК “Калинино Парк”',
+            balloonContent: 'Адрес ЖК “Калинино Парк”'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#imageWithContent',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/about/marker-2.png',
+            // Размеры метки.
+            iconImageSize: [46, 76],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-20, -65],
+            // Смещение слоя с содержимым относительно слоя с картинкой.
+            iconContentOffset: [0, 0],
+            // Макет содержимого.
+            iconContentLayout: MyIconContentLayout
+        });
+      
+        myMap2.geoObjects
+            .add(myPlacemarkWithContent);
+    }
+    else if (el3 != null){
+        var myMap3 = new ymaps.Map('zk_map3', {
+            center: [45.11687033, 39.02710437],
+            zoom: 14.5,
+            controls: []
+        }, {
+            searchControlProvider: 'yandex#search'
+        },
+            {suppressMapOpenBlock: true}
+        ),
+
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+
+        myPlacemarkWithContent = new ymaps.Placemark([45.11662028, 39.02905396], {
+            hintContent: 'Адрес ЖК “Калинино Парк”',
+            balloonContent: 'Адрес ЖК “Калинино Парк”'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#imageWithContent',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/about/marker-2.png',
+            // Размеры метки.
+            iconImageSize: [46, 76],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-20, -65],
+            // Смещение слоя с содержимым относительно слоя с картинкой.
+            iconContentOffset: [0, 0],
+            // Макет содержимого.
+            iconContentLayout: MyIconContentLayout
+        });
+        myPlacemarkWithContent1 = new ymaps.Placemark([45.11459310, 39.01894436], {
+            hintContent: 'Детский сад',
+            balloonContent: 'Детский сад'
+        }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: 'img/zk/infrastructure/marker-1.png',
+            iconImageSize: [46, 56],
+            iconImageOffset: [-20, -50],
+            iconContentOffset: [0, 0],
+            iconContentLayout: MyIconContentLayout
+        });
+        myPlacemarkWithContent2 = new ymaps.Placemark([45.11100736, 39.01984558], {
+            hintContent: 'Детский сад',
+            balloonContent: 'Детский сад'
+        }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: 'img/zk/infrastructure/marker-1.png',
+            iconImageSize: [46, 56],
+            iconImageOffset: [-20, -50],
+            iconContentOffset: [0, 0],
+            iconContentLayout: MyIconContentLayout
+        });
+        myPlacemarkWithContent3 = new ymaps.Placemark([45.11298259, 39.02585373], {
+            hintContent: 'Детский сад',
+            balloonContent: 'Детский сад'
+        }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: 'img/zk/infrastructure/marker-1.png',
+            iconImageSize: [46, 56],
+            iconImageOffset: [-20, -50],
+            iconContentOffset: [0, 0],
+            iconContentLayout: MyIconContentLayout
+        });
+        myPlacemarkWithContent4 = new ymaps.Placemark([45.12375393, 39.04338465], {
+            hintContent: 'Детский сад',
+            balloonContent: 'Детский сад'
+        }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: 'img/zk/infrastructure/marker-1.png',
+            iconImageSize: [46, 56],
+            iconImageOffset: [-20, -50],
+            iconContentOffset: [0, 0],
+            iconContentLayout: MyIconContentLayout
+        });
+        myPlacemarkWithContent5 = new ymaps.Placemark([45.12472613, 39.02072534], {
+            hintContent: 'Детский сад',
+            balloonContent: 'Детский сад'
+        }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: 'img/zk/infrastructure/marker-1.png',
+            iconImageSize: [46, 56],
+            iconImageOffset: [-20, -50],
+            iconContentOffset: [0, 0],
+            iconContentLayout: MyIconContentLayout
+        });
+        myPlacemarkWithContent6 = new ymaps.Placemark([45.11523892, 39.03173852], {
+            hintContent: 'Детский сад',
+            balloonContent: 'Детский сад'
+        }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: 'img/zk/infrastructure/marker-2.png',
+            iconImageSize: [46, 56],
+            iconImageOffset: [-20, -50],
+            iconContentOffset: [0, 0],
+            iconContentLayout: MyIconContentLayout
+        });
+        myPlacemarkWithContent7 = new ymaps.Placemark([45.11415040, 39.02948786], {
+            hintContent: 'Аптека',
+            balloonContent: 'Аптека'
+        }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: 'img/zk/infrastructure/marker-2.png',
+            iconImageSize: [46, 56],
+            iconImageOffset: [-20, -50],
+            iconContentOffset: [0, 0],
+            iconContentLayout: MyIconContentLayout
+        });
+        myPlacemarkWithContent8 = new ymaps.Placemark([45.11607993, 39.02442385], {
+            hintContent: 'Аптека',
+            balloonContent: 'Аптека'
+        }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: 'img/zk/infrastructure/marker-2.png',
+            iconImageSize: [46, 56],
+            iconImageOffset: [-20, -50],
+            iconContentOffset: [0, 0],
+            iconContentLayout: MyIconContentLayout
+        });
+        myPlacemarkWithContent9 = new ymaps.Placemark([45.11615590, 39.02764250], {
+            hintContent: 'Аптека',
+            balloonContent: 'Аптека'
+        }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: 'img/zk/infrastructure/marker-3.png',
+            iconImageSize: [46, 56],
+            iconImageOffset: [-20, -50],
+            iconContentOffset: [0, 0],
+            iconContentLayout: MyIconContentLayout
+        });
+        myPlacemarkWithContent10 = new ymaps.Placemark([45.10798153, 39.02221371], {
+            hintContent: 'Магазин',
+            balloonContent: 'Магазин'
+        }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: 'img/zk/infrastructure/marker-5.png',
+            iconImageSize: [46, 56],
+            iconImageOffset: [-20, -50],
+            iconContentOffset: [0, 0],
+            iconContentLayout: MyIconContentLayout
+        });
+        myPlacemarkWithContent11 = new ymaps.Placemark([45.11023036, 39.01873756], {
+            hintContent: 'Почта',
+            balloonContent: 'Почта'
+        }, {
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: 'img/zk/infrastructure/marker-4.png',
+            iconImageSize: [46, 56],
+            iconImageOffset: [-20, -50],
+            iconContentOffset: [0, 0],
+            iconContentLayout: MyIconContentLayout
+        });
+      
+        myMap3.geoObjects
+            .add(myPlacemarkWithContent)
+            .add(myPlacemarkWithContent1)
+            .add(myPlacemarkWithContent2)
+            .add(myPlacemarkWithContent3)
+            .add(myPlacemarkWithContent4)
+            .add(myPlacemarkWithContent5)
+            .add(myPlacemarkWithContent6)
+            .add(myPlacemarkWithContent7)
+            .add(myPlacemarkWithContent8)
+            .add(myPlacemarkWithContent9)
+            .add(myPlacemarkWithContent10)
+            .add(myPlacemarkWithContent11);
+    }
+    else if (el4 != null){
+        var myMap4 = new ymaps.Map('contact_map', {
+            center: [45.11692480, 39.01328703],
+            zoom: 14.3,
+            controls: []
+        }, {
+            searchControlProvider: 'yandex#search'
+        },
+            {suppressMapOpenBlock: true}
+        ),
+
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+
+        myPlacemark = new ymaps.Placemark([45.11698557, 38.99759308], {
+            hintContent: 'Адрес компании РСК',
+            balloonContent: 'Адрес компании РСК'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/about/marker-1.png',
+            // Размеры метки.
+            iconImageSize: [46, 76],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-25, -65]
+        }),
+
+        myPlacemarkWithContent = new ymaps.Placemark([45.11662028, 39.02905396], {
+            hintContent: 'Адрес ЖК “Калинино Парк”',
+            balloonContent: 'Адрес ЖК “Калинино Парк”',
+            iconContent: '12'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#imageWithContent',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/about/marker-2.png',
+            // Размеры метки.
+            iconImageSize: [46, 76],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-20, -75],
+            // Смещение слоя с содержимым относительно слоя с картинкой.
+            iconContentOffset: [0, 0],
+            // Макет содержимого.
+            iconContentLayout: MyIconContentLayout
+        });
+      
+        myMap4.geoObjects
+            .add(myPlacemark)
+            .add(myPlacemarkWithContent);
+    }
 });
