@@ -4199,6 +4199,7 @@ textarea:-ms-input-placeholder{
 
 .figures_block{
 	padding-top: 60px;
+	font-size: 0;
 }
 
 .figures_block .figures_item{
