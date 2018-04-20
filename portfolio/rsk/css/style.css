@@ -4207,7 +4207,9 @@ textarea:-ms-input-placeholder{
 	height: 149px;
 	background: #a26f62;
 	display: inline-block;
-	display: -moz-inline-stack;
+	display: -moz-inline-box;
+	letter-spacing: normal;
+	zoom: 1;
 	-webkit-transform: rotate(45deg);
 	transform: rotate(45deg);
 	border: 1px solid #fff;
