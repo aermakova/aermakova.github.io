@@ -4199,7 +4199,6 @@ textarea:-ms-input-placeholder{
 
 .figures_block{
 	padding-top: 60px;
-	font-size: 0;
 }
 
 .figures_block .figures_item{
@@ -4207,9 +4206,6 @@ textarea:-ms-input-placeholder{
 	height: 149px;
 	background: #a26f62;
 	display: inline-block;
-	display: -moz-inline-box;
-	letter-spacing: normal;
-	zoom: 1;
 	-webkit-transform: rotate(45deg);
 	transform: rotate(45deg);
 	border: 1px solid #fff;
@@ -4222,6 +4218,7 @@ textarea:-ms-input-placeholder{
 
 .figures_block .figures_item ins{
 	padding-top: 40px;
+	position: absolute;
 	width: 149px;
 	height: 149px;
 	-webkit-transform: rotate(-45deg);
