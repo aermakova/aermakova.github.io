@@ -1281,7 +1281,7 @@ header .logo img{
 
 .text{
 	font-size: 14px;
-	padding: 0 90px;
+	padding: 0 78px;
 	color: #1c3047;
 	line-height: 17px;
 	margin-bottom: 15px;
@@ -2673,21 +2673,21 @@ header .logo img{
 
 .zk_infrast_map .zk_infrast_map_left{
 	width: 180px;
-	height: 738px;
+	height: 739px;
 	background: #a26f62;
-	padding: 30px 0 40px 0;
+	padding: 10px 0 40px 0;
 	position: relative;
 	bottom: 88px;
 }
 
 .zk_infrast_map .zk_infrast_map_left .zk_infrast_map_ico{
 	text-align: center;
-	padding: 7.3px 0;
+	padding: 16px 0;
 }
 
 .zk_infrast_map .zk_infrast_map_left .zk_infrast_map_ico span{
-	width: 46px;
-	height: 46px;
+	width: 37px;
+	height: 37px;
 	display: block;
 	margin: 0 auto;
 	position: relative;
@@ -2695,7 +2695,6 @@ header .logo img{
 
 .zk_infrast_map .zk_infrast_map_left .zk_infrast_map_ico span img{
 	position: absolute;
-	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
@@ -2705,8 +2704,10 @@ header .logo img{
 
 .zk_infrast_map .zk_infrast_map_left .zk_infrast_map_ico p{
 	color: #fff;
-	margin-top: 10px;
 	font-size: 14px;
+	display: block;
+	margin-top: 10px;
+	padding: 0 15px;
 }
 
 .zk_infrast_map .zk_infrast_map_wrap{
@@ -2816,7 +2817,7 @@ header .logo img{
 }
 
 .zk_infrast_info .zk_infrast_info_buttons .zk_infrast_buttons .zk_infrast_button_item ins{
-	padding-top: 40px;
+	padding-top: 35px;
 	width: 180px;
 	height: 180px;
 	-webkit-transform: rotate(-45deg);
@@ -2828,13 +2829,16 @@ header .logo img{
 .zk_infrast_info .zk_infrast_info_buttons .zk_infrast_buttons .zk_infrast_button_item ins span{
 	display: block;
 	position: relative;
-	font-size: 14px;
+	width: 60px;
+	margin: auto;
+	height: 60px;
 }
 
 .zk_infrast_info .zk_infrast_info_buttons .zk_infrast_buttons .zk_infrast_button_item ins span img{
 	position: absolute;
 	left: 0;
 	right: 0;
+	bottom: 0;
 	margin: auto;
 }
 
@@ -2843,12 +2847,11 @@ header .logo img{
 	color: #fff;
 	position: absolute;
 	text-align: center;
-	width: 130px;
+	display: block;
+	margin-top: 10px;
 	line-height: 16px;
 	left: 0;
-	top: 100px;
 	right: 0;
-	margin: auto;
 }
 
 .zk_infrast_info .zk_infrast_info_buttons .zk_infrast_buttons .zk_infrast_button-js{
@@ -3096,7 +3099,7 @@ header .logo img{
 
 .zk_repair_info h2{
 	color: #fff;
-	margin-top: 30px;
+	padding-top: 30px;
 }
 
 .zk_repair_info .zk_repair_info_buttons{
@@ -3154,6 +3157,7 @@ header .logo img{
 
 .zk_repair_info .zk_repair_info_buttons .zk_repair_button ins{
 	padding-top: 40px;
+	position: absolute;
 	width: 180px;
 	height: 180px;
 	-webkit-transform: rotate(-45deg);
@@ -3596,7 +3600,6 @@ header .logo img{
 }
 
 .relocation_reason .sub_title{
-	font-family: 'opensans-bold';
 	text-transform: none;
 	font-size: 24px;
 	color: #1c3047;
@@ -3707,6 +3710,7 @@ header .logo img{
 	margin-bottom: 10px;
 	color: #1c3047;
 	height: 30px;
+	line-height: 28px;
 	width: 100%;
 }
 
@@ -4144,7 +4148,7 @@ textarea:-ms-input-placeholder{
     background-size: cover;
     background-position-y: 80px;
     top: -85px;
-    height: 645px;
+    height: 690px;
     position: absolute;
     z-index: -2;
 }
@@ -4155,7 +4159,7 @@ textarea:-ms-input-placeholder{
 
 .mortgage_figures{
 	position: relative;
-	margin-top: 30px;
+	margin-top: 75px;
 }
 
 .mortgage_figures:before{
@@ -4256,7 +4260,7 @@ textarea:-ms-input-placeholder{
 }
 
 .mortgage_banks h2{
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 }
 
 .mortgage_banks ul li{
