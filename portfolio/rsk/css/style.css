@@ -3336,6 +3336,7 @@ header .logo img{
 	-webkit-transform: rotate(-45deg);
 	transform: rotate(-45deg);
 	cursor: pointer;
+	position: absolute;
 	z-index: 4;
 }
 
