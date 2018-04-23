@@ -48,6 +48,42 @@ $(function(){
         fixedContentPos: false
     });
 
+    $('.mortgage_popup').magnificPopup({
+        type: 'inline',
+        removalDelay: 350,
+        mainClass: 'mfp-fade',
+        fixed: false,
+        autoCenter: true,
+        fixedContentPos: false
+    });
+
+    $('.militari_mortgage_popup').magnificPopup({
+        type: 'inline',
+        removalDelay: 350,
+        mainClass: 'mfp-fade',
+        fixed: false,
+        autoCenter: true,
+        fixedContentPos: false
+    });
+
+    $('.maternal_capital_popup').magnificPopup({
+        type: 'inline',
+        removalDelay: 350,
+        mainClass: 'mfp-fade',
+        fixed: false,
+        autoCenter: true,
+        fixedContentPos: false
+    });
+
+    $('.instalments_popup').magnificPopup({
+        type: 'inline',
+        removalDelay: 350,
+        mainClass: 'mfp-fade',
+        fixed: false,
+        autoCenter: true,
+        fixedContentPos: false
+    });
+
     $('.zk_apartment_option .zk_apartment_option_item').slick({
         dots: false,
         autoplay: false,

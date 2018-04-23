@@ -2812,10 +2812,6 @@ header .logo img{
 	margin-top: -107px;
 }
 
-.zk_infrast_info .zk_infrast_info_buttons .zk_infrast_buttons .zk_infrast_button_item:nth-child(2) ins{
-	padding-top: 15px;
-}
-
 .zk_infrast_info .zk_infrast_info_buttons .zk_infrast_buttons .zk_infrast_button_item ins{
 	padding-top: 35px;
 	width: 180px;
@@ -3885,6 +3881,14 @@ textarea:-ms-input-placeholder{
 	vertical-align: top;
 }
 
+.contact_left .form_block{
+	margin-top: 25px;
+}
+
+.contact_left .form_block h3{
+	margin-bottom: 19px;
+}
+
 .contact_left .form_block form{
 	text-align: right;
 }
@@ -3915,6 +3919,10 @@ textarea:-ms-input-placeholder{
 .contact_bottom .contact_right p span{
 	display: block;
 	margin-bottom: 3px;
+}
+
+.contact .sub_title{
+	margin-bottom: 15px;
 }
 
 #contact_map{
@@ -4280,6 +4288,10 @@ textarea:-ms-input-placeholder{
 	bottom: 46px;
 }
 
+.maternal_figures .figures_block .figures_item:nth-child(4) ins{
+	width: 152px;
+}
+
 .maternal_figures .figures_block .figures_item:nth-child(5){
 	left: 142px;
 }
@@ -4302,6 +4314,11 @@ textarea:-ms-input-placeholder{
 .military_figures .figures_block .figures_item ins{
 	width: 135px;
 	height: 135px;
+	padding-top: 20px;
+}
+
+.military_figures .figures_block .figures_item ins span{
+	margin-bottom: 15px;
 }
 
 .military_figures .figures_block .figures_item:nth-child(4){
@@ -4320,9 +4337,22 @@ textarea:-ms-input-placeholder{
 	bottom: 43px;
 }
 
+.military_figures .figures_block .figures_item:nth-child(6) ins{
+	padding-top: 28px;
+	width: 140px;
+}
+
+.military_figures .figures_block .figures_item:nth-child(6) ins p{
+	width: 140px;
+}
+
 .military_figures .figures_block .figures_item:nth-child(7){
 	left: 120px;
 	bottom: 43px;
+}
+
+.military_figures .figures_block .figures_item:nth-child(7) ins{
+	padding-top: 28px;
 }
 
 .military_figures .figures_block .figures_item:nth-child(8){
@@ -4330,9 +4360,133 @@ textarea:-ms-input-placeholder{
 	bottom: 43px;
 }
 
+.military_figures .figures_block .figures_item:nth-child(8) ins{
+	padding-top: 28px;
+}
+
 .military_figures .figures_block .figures_item:nth-child(9){
 	left: 120px;
 	bottom: 43px;
+}
+
+.military_figures .figures_block .figures_item:nth-child(9) ins{
+	padding-top: 28px;
+	width: 150px;
+	left: -8px;
+}
+
+.military_figures .figures_block .figures_item:nth-child(9) ins p{
+	width: 150px;
+}
+
+.seo_text{
+	padding: 30px 90px 0 90px;
+	text-align: left;
+	display: block;
+	font-size: 14px;
+	line-height: 17px;
+	color: #1c3047;
+}
+
+.instalments_points{
+	background: url(../img/client/instalments/background.jpg) no-repeat center;
+    background-size: cover;
+    margin: 112px 0 88px 0;
+    position: relative;
+}
+
+.instalments_points:before{
+	content: '';
+	position: absolute;
+	top: -87px;
+	width: 100%;
+	height: 88px;
+	background: #a26f62;
+}
+
+.instalments_points:after{
+	content: '';
+	position: absolute;
+	bottom: -87px;
+	width: 100%;
+	height: 88px;
+	background: #1c3047;
+}
+
+.instalments_points .top_points_wrap{
+	background: #1c3047;
+	width: 420px;
+	padding: 80px 20px;
+	color: #fff;
+	display: inline-block;
+}
+
+.instalments_points .top_points_wrap .points_item i{
+	background: url(../img/client/instalments/ico-1.png) no-repeat center;
+	background-size: 75%;
+}
+
+.instalments_points .top_points_wrap .points_item p{
+	width: 300px;
+	margin-left: 20px;
+}
+
+.instalments_points .bottom{
+	text-align: right;
+}
+
+.instalments_points .bottom_points_wrap{
+	background: #fff;
+	width: 560px;
+	padding: 80px 20px 80px 60px;
+	display: inline-block;
+	text-align: left;
+}
+
+.instalments_points .bottom_points_wrap .points_item:first-child{
+	margin-bottom: 20px;
+}
+
+.instalments_points .bottom_points_wrap .points_item:first-child i{
+	background: url(../img/client/instalments/ico-2.png) no-repeat center;
+	background-size: 75%;
+}
+
+.instalments_points .bottom_points_wrap .points_item:nth-child(2) i{
+	background: url(../img/client/instalments/ico-3.png) no-repeat center;
+	background-size: 75%;
+}
+
+.instalments_points .bottom_points_wrap .points_item p{
+	width: 400px;
+	margin-left: 20px;
+}
+
+.instalments_points .points_item{
+	display: block;
+}
+
+.instalments_points .points_item i{
+	display: inline-block;
+	vertical-align: middle;
+	width: 60px;
+	height: 60px;
+}
+
+.instalments_points .points_item p{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 14px;
+	line-height: 17px;
+}
+
+.instalments_points .instalments_button_wrap{
+	margin-top: 45px;
+}
+
+.instalments_points .instalments_button_wrap .brown_button{
+	position: relative;
+	left: 80px;
 }
 
 .tags{
@@ -4341,7 +4495,7 @@ textarea:-ms-input-placeholder{
 }
 
 .tags ul{
-	padding: 30px 100px 0 100px;
+	padding: 30px 90px 0 90px;
 	text-align: left;
 }
 
