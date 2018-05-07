@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="shortcut icon" href="favicon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Каталог</title>
+</head>
+<body>
+
+	<div class="wrap">
+
+		<header class="header_shadow">
+			<div class="center">
+				<div class="nav_line">
+					<a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+					<nav>
+						<a href="#" class="nav_item active">Кондиционеры</a>
+						<a href="#" class="nav_item">Установка кондиционеров</a>
+						<a href="#" class="nav_item">Обслуживание</a>
+					</nav>
+					<a href="#" class="callback">
+						<i></i>
+						<span>8 (962) 000 77 99</span>
+					</a>
+					<ins>Без выходных</ins>
+				</div>
+			</div>
+		</header>
+
+		<section class="catalog">
+			<div class="center">
+				<div class="catalog_btns">
+					<a href="#" class="btn_item all">Все</a>
+					<a href="#" class="btn_item">Доступные по цене</a>
+					<a href="#" class="btn_item">С управлением через смартфон</a>
+					<a href="#" class="btn_item">Самые надежные кондиционеры</a>
+					<a href="#" class="btn_item">Мобильные моноблоки</a>
+					<a href="#" class="btn_item">Полу-промышленные сплит-системы</a>
+				</div>
+			</div>
+			<div class="center2">
+				<div class="catalog_block">
+					<div class="catalog_item">
+						<div class="h2">Все</div>
+						<div class="items_block">	
+							<div class="item">
+								<h3 class="item_title">abion ash-c077be</h3>
+								<div class="item_slide">
+									<div class="main_img">
+										<img src="img/catalog/img-1.jpg" class="active" alt="">
+										<img src="img/catalog/img-2.jpg" alt="">
+										<img src="img/catalog/img-3.jpg" alt="">
+										<img src="img/catalog/img-4.jpg" alt="">
+									</div>
+									<div class="goods_label sale">АКЦИЯ</div>
+									<div class="prev_img">
+										<div class="prev_item hide">
+											<img src="img/catalog/img-1.jpg" alt="">
+										</div>
+										<div class="prev_item">
+											<img src="img/catalog/img-2.jpg" alt="">
+										</div>
+										<div class="prev_item">
+											<img src="img/catalog/img-3.jpg" alt="">
+										</div>
+										<div class="prev_item">
+											<img src="img/catalog/img-4.jpg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="desc">
+									<div class="char">
+										<p>Тихий компрессор компании Toshiba</p>
+										<p>4D-комфортное распределение воздушных потоков</p>
+										<p>Активный карбоновый фильтр</p>
+										<p>Анти-бактериальный фильтр</p>
+										<p>Осушение и ионизатор</p>
+									</div>
+									<div class="goods_desc"></div>
+									<div class="price_block">
+										<ins>18 000 руб.</ins>
+									</div>
+									<div class="button_block">
+										<a  href="#" class="btn goods_btn open_popup" data-title="abion ash-c077be">Оставить заявку</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="center">
+				<div class="nav_line">
+					<a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+					<div class="privacy">
+						<a href="#">Политика конфиденциальности</a>
+					</div>
+					<a href="#" class="callback">
+						<i></i>
+						<span>8 (962) 000 77 99</span>
+					</a>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+	<div class="goods_popup">
+		<div class="popup_close">×</div>
+		<div class="title_popup">Оставить заявку на кондиционер</div>
+		<div class="goods_title">ABION</div>
+		<div class="form_popup">
+			<div class="form">
+				<form action="php/sendmail.php" data-them="Заказ с сайта" data-show=".thank, .bg_popup" data-hide=".popup">
+					<div class="element">
+						<input type="text" name="name" data-name="Имя:" placeholder="Ваше имя" class="login">
+					</div>
+					<div class="element">
+						<input type="text" name="phone" data-name="Телефон:" placeholder="Ваш телефон" class="phone" data-required>
+					</div>
+					<input type="hidden" name="goods_title" data-name="Товар:">
+					<label class="checkbox_popup"><input type="checkbox" name=""><i></i><span>Принимаю <a href="#personal_data_popup" class="personal_data_open">соглашение об обработке персональных данных</a></span></label>
+					<button type="submit" class="btn popup_btn">Отправить</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="personal_data_popup" class="personal_data_popup">
+		<div class="personal_data_close">×</div>
+		<h2 class="title_popup3"><b>Согласие</b><br>посетителя сайта на обработку персональных данных</h2>
+		<p> Настоящим свободно, своей волей и в своем интересе даю согласие ООО «Региональная строительная компания», которое находится по адресу: Россия, Краснодарский край, г. Краснодар, ул. им. Силантьева Ю.В., 80/1 (далее – Застройщик), на автоматизированную и неавтоматизированную обработку моих персональных данных, в том числе с использованием интернет-сервисов Google analytics, Яндекс.Метрика, LiveInternet, Рейтинг Mail.ru, Google Doubleclick в соответствии со следующим перечнем:</p>
+		<ul>
+			<li>фамилия, имя;</li>
+			<li>источник захода на сайт жк-калинино-парк.рф (далее – Сайт Застройщика) и информация поискового или рекламного запроса;</li>
+			<li>данные о пользовательском устройстве (среди которых разрешение, версия и другие атрибуты, характеризующие пользовательское устройство);</li>
+			<li>пользовательские клики, просмотры страниц, заполнения полей, показы и просмотры баннеров и видео;</li>
+			<li>данные, характеризующие аудиторные сегменты;</li>
+			<li>параметры сессии;</li>
+			<li>данные о времени посещения;</li>
+			<li>идентификатор пользователя, хранимый в cookie,</li>
+		</ul>
+		<p>для целей повышения осведомленности посетителей Сайта Застройщика о продуктах и услугах Застройщика, предоставления релевантной рекламной информации и оптимизации рекламы.</p>
+		<p>Застройщик вправе осуществлять обработку моих персональных данных следующими способами: сбор, запись, систематизация, накопление, хранение, обновление, изменение, использование, передача (распространение, предоставление, доступ).</p>
+		<p>Настоящее согласие вступает в силу с момента моего перехода на Сайт Застройщика и действует в течение сроков, установленных действующим законодательством РФ.</p>
+	</div>
+
+	<div class="thank"> 
+      <div class="title_popup">Cпасибо</div>
+      <p>Мы благодарим вас за то, что вы оставили заявку. Скоро наш менеджер свяжется с вами по указанному номеру телефона.</p>
+      <p>Если у вас возникнут вопросы или пожелания - вы всегда можете позвонить нам.</p>
+    </div>
+
+	<div class="popup_bg"></div>
+
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/jquery.sendFormLP.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+    </script>
+	<script src="js/pixelScreen.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>
