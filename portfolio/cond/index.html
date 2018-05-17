@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/magnific-popup.css">
 	<link rel="shortcut icon" href="favicon.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,17 +16,17 @@
 		<header>
 			<div class="center">
 				<div class="nav_line">
-					<a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+					<a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
 					<nav>
-						<a href="#" class="nav_item">Кондиционеры</a>
-						<a href="#" class="nav_item">Установка кондиционеров</a>
-						<a href="#" class="nav_item">Обслуживание</a>
+						<a href="catalog.html" class="nav_item">Кондиционеры</a>
+						<a href="installation.html" class="nav_item">Установка кондиционеров</a>
+						<a href="service.html" class="nav_item">Обслуживание</a>
 					</nav>
 					<a href="#" class="callback">
 						<i></i>
 						<span>8 (962) 000 77 99</span>
+						<ins>Без выходных</ins>
 					</a>
-					<ins>Без выходных</ins>
 				</div>
 			</div>
 		</header>
@@ -34,7 +34,7 @@
 		<section class="main">
 			<div class="center">
 				<div class="main_title">Работаем по всем городам Кавказких Минеральных Вод</div>
-				<h1 class="h1">Кондиционер + установка<br>всего за 15 000 рублей!</h1>
+				<h1 class="h1">Кондиционер + установка<br>всего за <b>15 000</b> рублей!</h1>
 				<div class="main_text">Оставьте заявку и мы бесплатно замерим<br>в течение 24-х часов</div>
 				<div class="main_bottom">
 					<div class="main_img">
@@ -43,12 +43,12 @@
 					<div class="main_form">
 						<div class="form_text">Замерщик свяжется<br>с вами в течение 10 минут</div>
 						<div class="form">
-							<form action="#">
+							<form action="php/sendmail.php" data-them="Обслуживание" data-show=".thank, .thank_bg" data-hide=".goods_popup, .popup_bg">
 								<div class="element">
-									<input type="text" name="name" class="login" placeholder="Ваше имя">
+									<input type="text" name="name" data-name="Имя:" placeholder="Ваше имя" class="login">
 								</div>
 								<div class="element">
-									<input type="text" name="phone" class="phone" placeholder="Ваш телефон" required>
+									<input type="text" name="phone" data-name="Телефон:" placeholder="Ваш телефон" class="phone" data-required>
 								</div>
 								<button type="submit" class="btn form_btn">Отправить заявку</button>
 							</form>
@@ -56,17 +56,17 @@
 					</div>
 				</div>
 			</div>
-			<div class="scroll_button"><i></i></div>
+			<a href="#about" class="scroll_button"><i></i></a>
 		</section>
 
-		<section class="about">
+		<section class="about" id="about">
 			<div class="center">
 				<div class="h2">Компания Сплит-Центр</div>
 				<div class="about_text">
 					<p class="text">Профессиональный монтаж кондиционера - залог его долгой и надежной работы.</p>
 					<p class="text">В нашей компании работают опытные бригады монтажников, оснащенные профессиональным оборудованием и имеющие за плечами большой опыт.</p>
 					<div class="btn_wrap">
-					<a href="#popup1" class="btn main_btn popup-content">Бесплатный выезд замерщика</a>
+					<a href="#" class="btn screen_btn open_form1" data-title="Заказать бесплатный замер">Бесплатный выезд замерщика</a>
 					</div>
 				</div>
 			</div>
@@ -111,7 +111,7 @@
 					<div class="img_block_right">Нет! В любом большом магазине стоимость монтажа уже добавили к цене самого кондиционера, а монтаж делают некачественно.</div>
 				</div>
 				<div class="btn_wrap">
-					<a href="#popup2" class="btn main_btn popup-content">Узнать подробнее</a>
+					<a href="#" class="btn screen_btn open_form1" data-title="Заказать консультацию менеджера">Узнать подробнее</a>
 				</div>
 			</div>
 		</div>
@@ -124,35 +124,35 @@
 						<div class="circle">
 							<div class="h3 circle_title">Самые доступные по стоимости</div>
 						</div>
-						<a href="#" class="btn main_btn">Посмотреть</a>
+						<a href="#" class="btn screen_btn">Посмотреть</a>
 					</li>
 					<li>
 						<div class="circle">
 							<div class="h3 circle_title">С управлением через смартфон</div>
 						</div>
-						<a href="#" class="btn main_btn">Посмотреть</a>
+						<a href="#" class="btn screen_btn">Посмотреть</a>
 					</li>
 					<li>
 						<div class="circle">
 							<div class="h3 circle_title">Самые надежные кондиционеры</div>
 						</div>
-						<a href="#" class="btn main_btn">Посмотреть</a>
+						<a href="#" class="btn screen_btn">Посмотреть</a>
 					</li>
 					<li>
 						<div class="circle">
 							<div class="h3 circle_title">Мобильный моноблок</div>
 						</div>
-						<a href="#" class="btn main_btn">Посмотреть</a>
+						<a href="#" class="btn screen_btn">Посмотреть</a>
 					</li>
 					<li>
 						<div class="circle">
 							<div class="h3 circle_title">Полу-промышленные сплит-системы</div>
 						</div>
-						<a href="#" class="btn main_btn">Посмотреть</a>
+						<a href="#" class="btn screen_btn">Посмотреть</a>
 					</li>
 				</ul>
 				<div class="btn_wrap">
-					<a href="#popup3" class="btn main_btn popup-content">ПОМОГИТЕ ПОДОБРАТЬ</a>
+					<a href="#" class="btn screen_btn open_form1" data-title="Заказать подбор кондиционера">ПОМОГИТЕ ПОДОБРАТЬ</a>
 				</div>
 			</div>
 		</section>
@@ -250,7 +250,9 @@
 			<div class="center">
 				<div class="nav_line">
 					<a href="#" class="logo"><img src="img/logo.png" alt=""></a>
-					<a href="#" class="privacy">Политика конфиденциальности</a>
+					<div class="privacy">
+						<a href="#personal_data_popup" class="polit_data_open">Политика конфиденциальности</a>
+					</div>
 					<a href="#" class="callback">
 						<i></i>
 						<span>8 (962) 000 77 99</span>
@@ -261,55 +263,20 @@
 
 	</div>
 
-	<div id="popup1" class="white-popup mfp-hide">
+	<div class="goods_popup">
+		<div class="popup_close">×</div>
 		<div class="title_popup">Заказать бесплатный замер</div>
 		<div class="form_popup">
 			<div class="form">
-				<form action="">
+				<form action="php/sendmail.php" data-them="Бесплатный замер" data-show=".thank, .thank_bg" data-hide=".goods_popup, .popup_bg">
 					<div class="element">
-						<input type="text" name="name" placeholder="Ваше имя" class="login">
+						<input type="text" name="name" data-name="Имя:" placeholder="Ваше имя" class="login">
 					</div>
 					<div class="element">
-						<input type="text" name="phone" placeholder="Ваш телефон" class="phone" required>
+						<input type="text" name="phone" data-name="Телефон:" placeholder="Ваш телефон" class="phone" data-required>
 					</div>
-					<label class="checkbox_popup"><input type="checkbox" name=""><i></i><span>Принимаю <a href="#personal_data_popup" class="personal_data_open">соглашение об обработке персональных данных</a></span></label>
-					<button type="submit" class="btn popup_btn">Отправить</button>
-				</form>
-			</div>
-		</div>
-	</div>
-
-	<div id="popup2" class="white-popup mfp-hide">
-		<div class="title_popup">Заказать консультацию менеджера</div>
-		<div class="form_popup">
-			<div class="form">
-				<form action="">
-					<div class="element">
-						<input type="text" name="name" placeholder="Ваше имя" class="login">
-					</div>
-					<div class="element">
-						<input type="text" name="phone" placeholder="Ваш телефон" class="phone" required>
-					</div>
-					<label class="checkbox_popup"><input type="checkbox" name=""><i></i><span>Принимаю <a href="#personal_data_popup" class="personal_data_open">соглашение об обработке персональных данных</a></span></label>
-					<button type="submit" class="btn popup_btn">Отправить</button>
-				</form>
-			</div>
-		</div>
-	</div>
-
-	<div id="popup3" class="white-popup mfp-hide">
-		<div class="title_popup">Заказать подбор кондиционера</div>
-		<div class="form_popup">
-			<div class="form">
-				<form action="">
-					<div class="element">
-						<input type="text" name="name" placeholder="Ваше имя" class="login">
-					</div>
-					<div class="element">
-						<input type="text" name="phone" placeholder="Ваш телефон" class="phone" required>
-					</div>
-					<label class="checkbox_popup"><input type="checkbox" name=""><i></i><span>Принимаю <a href="#personal_data_popup" class="personal_data_open">соглашение об обработке персональных данных</a></span></label>
-					<button type="submit" class="btn popup_btn">Отправить</button>
+					<label class="checkbox_popup"><input type="checkbox" checked name="check" data-required><i id="check"></i><span>Принимаю <a href="#personal_data_popup" class="personal_data_open">соглашение об обработке персональных данных</a></span></label>
+					<button type="submit" class="btn screen_btn">Отправить</button>
 				</form>
 			</div>
 		</div>
@@ -317,31 +284,35 @@
 
 	<div id="personal_data_popup" class="personal_data_popup">
 		<div class="personal_data_close">×</div>
-		<h2 class="title_popup3"><b>Согласие</b><br>посетителя сайта на обработку персональных данных</h2>
-		<p> Настоящим свободно, своей волей и в своем интересе даю согласие ООО «Региональная строительная компания», которое находится по адресу: Россия, Краснодарский край, г. Краснодар, ул. им. Силантьева Ю.В., 80/1 (далее – Застройщик), на автоматизированную и неавтоматизированную обработку моих персональных данных, в том числе с использованием интернет-сервисов Google analytics, Яндекс.Метрика, LiveInternet, Рейтинг Mail.ru, Google Doubleclick в соответствии со следующим перечнем:</p>
-		<ul>
-			<li>фамилия, имя;</li>
-			<li>источник захода на сайт жк-калинино-парк.рф (далее – Сайт Застройщика) и информация поискового или рекламного запроса;</li>
-			<li>данные о пользовательском устройстве (среди которых разрешение, версия и другие атрибуты, характеризующие пользовательское устройство);</li>
-			<li>пользовательские клики, просмотры страниц, заполнения полей, показы и просмотры баннеров и видео;</li>
-			<li>данные, характеризующие аудиторные сегменты;</li>
-			<li>параметры сессии;</li>
-			<li>данные о времени посещения;</li>
-			<li>идентификатор пользователя, хранимый в cookie,</li>
-		</ul>
-		<p>для целей повышения осведомленности посетителей Сайта Застройщика о продуктах и услугах Застройщика, предоставления релевантной рекламной информации и оптимизации рекламы.</p>
-		<p>Застройщик вправе осуществлять обработку моих персональных данных следующими способами: сбор, запись, систематизация, накопление, хранение, обновление, изменение, использование, передача (распространение, предоставление, доступ).</p>
-		<p>Настоящее согласие вступает в силу с момента моего перехода на Сайт Застройщика и действует в течение сроков, установленных действующим законодательством РФ.</p>
+		<h2 class="title_popup"><b>Согласие</b><br>посетителя сайта на обработку персональных данных</h2>
+		<p>Сплит-система ABION ASH-C077BE серии Plazma имеет режимы «Тепло-Холод”, режим «TURBO», режим сна, 24-часовой таймер, функцию автозапуска. В данной модели установлена система плазменной очистки: плазма является одним из наиболее эффективных видов ионизаторов, вырабатывает активные ионы водорода и кислорода для соединения в воздухе с бактериями, вирусами, пылью и другими вредными веществами, они оседают на поверхности и с конденсатом удаляются из кондиционера.</p>
+		<p>Так же в сплит-системе установлен фильтр, состоящий из трех компонентов: - фильтр с ионами серебра, обладающими сильным анти-бактериальным действием, разрушающими клетки бактерий, грибков, вирусов и т.п., делая воздух безопаснее и чище; - фильтр с витамином C: обогащает воздух витаминами, которые попадая на кожу человека, повышают иммунитет, устойчивость к стрессам и защищают от ультрафиолетовых лучей; - Lysozyme фильтр, представляющий собой биологический ECO-фильтр, на фильтрующий материал которого нанесены особые ферменты – лизоцимы, задерживающие мелкие частицы пыли и уничтожающие микроорганизмы.</p>
 	</div>
 
-	<div class="personal_data_popup_bg"></div>
+	<div id="polit_data_popup" class="polit_data_popup">
+		<div class="polit_data_close">×</div>
+		<h2 class="title_popup"><b>Политика конфиденциальности</h2>
+		<p>Сплит-система ABION ASH-C077BE серии Plazma имеет режимы «Тепло-Холод”, режим «TURBO», режим сна, 24-часовой таймер, функцию автозапуска. В данной модели установлена система плазменной очистки: плазма является одним из наиболее эффективных видов ионизаторов, вырабатывает активные ионы водорода и кислорода для соединения в воздухе с бактериями, вирусами, пылью и другими вредными веществами, они оседают на поверхности и с конденсатом удаляются из кондиционера.</p>
+		<p>Так же в сплит-системе установлен фильтр, состоящий из трех компонентов: - фильтр с ионами серебра, обладающими сильным анти-бактериальным действием, разрушающими клетки бактерий, грибков, вирусов и т.п., делая воздух безопаснее и чище; - фильтр с витамином C: обогащает воздух витаминами, которые попадая на кожу человека, повышают иммунитет, устойчивость к стрессам и защищают от ультрафиолетовых лучей; - Lysozyme фильтр, представляющий собой биологический ECO-фильтр, на фильтрующий материал которого нанесены особые ферменты – лизоцимы, задерживающие мелкие частицы пыли и уничтожающие микроорганизмы.</p>
+	</div>
+
+	<div class="thank"> 
+		<div class="thank_close">×</div>
+      	<div class="title_popup">Cпасибо!</div>
+      	<p>Мы благодарим вас за то, что вы оставили заявку. Скоро наш менеджер свяжется с вами по указанному номеру телефона.</p>
+      	<p>Если у вас возникнут вопросы или пожелания - вы всегда можете позвонить нам.</p>
+    </div>
+
+	<div class="popup_polit_bg"></div>
+	<div class="popup_bg"></div>
+	<div class="thank_bg"></div>
+	<div class="popup_personal_bg"></div>
 
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/jquery.magnific-popup.js"></script>
     <script src="js/jquery.sendFormLP.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
     </script>
-	<script src="js/pixelScreen.js"></script>
 	<script src="js/scripts.js"></script>
 </body>
 </html>

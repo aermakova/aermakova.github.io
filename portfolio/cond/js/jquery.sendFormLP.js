@@ -3,8 +3,8 @@
   	jQuery.fn.sendFormLP = function(options){
 
   		options = $.extend({
-            toEmail: 'zerakul87@mail.ru',
-            fromEmail: 'info@sergeibelousov.ru',
+            toEmail: 'ermakova.lina.lina@gmail.com',
+            fromEmail: 'ermakova.lina.lina@gmail.com',
             interval : 5000
         }, options);
 
@@ -27,9 +27,13 @@
 	            $items.removeClass('error');
 
 	            $required.each(function(){
-	            	if($(this).val() == ''){
+	            	if($(this).val() == '' && this.name != "check"){
 	            		i = false
 	            		$(this).addClass('error');
+	            	}
+	            	else if(!$(this).is(':checked') && this.name == "check"){
+	            		i = false
+	            		$('#check').addClass('error');
 	            	}
 	            });
 
@@ -84,7 +88,7 @@ $(function(){
 	$('form').sendFormLP({
 		toEmail: 'ermakova.lina.lina@gmail.com',
 		fromEmail: 'ermakova.lina.lina@gmail.com',
-		interval: 3000
+		interval: 6000
 	});
 
 });
