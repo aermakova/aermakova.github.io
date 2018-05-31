@@ -7026,11 +7026,8 @@ body.touch .tooltip.show {
   background-position: center; }
 
 .bg-grey {
-  padding: 100px 0;
+  padding: 80px 0;
   background: url("../images/bg-grey.png"); }
-  @media (max-width: 1023px) {
-    .bg-grey {
-      padding: 50px 0; } }
 
 .bg-grey-dark {
   background: url("../images/bg-grey-dark.png"); }
@@ -7383,11 +7380,14 @@ body.noScroll {
       padding: 50px 0; } }
 
 .bg-grey {
-  padding: 100px 0;
+  padding: 80px 0;
   background-color: #f7f7f7; }
   @media (max-width: 1023px) {
     .bg-grey {
-      padding: 50px 0; } }
+      padding: 70px 0; } }
+  @media (max-width: 767px) {
+    .bg-grey {
+      padding: 60px 0; } }
 
 .bg-grey-1 {
   padding: 50px 0;
