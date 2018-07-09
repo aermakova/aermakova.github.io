@@ -1,7 +1,3 @@
-// $(window).load(function () {
-//   $(".loader").delay(100).fadeOut(250);
-// });
-
 $(window).scroll(function(){
     $('.main_content').css({'top': -$(window).scrollTop()/3});
 });
@@ -14,9 +10,6 @@ $(window).scroll(function(){
 //         left: e.pageX / 50 + 200,
 //         top: e.pageY / 50 + 200
 //     });
-// });
-// $(document).ready(function(){
-//     $('#scrollbar1').tinyscrollbar();
 // });
 
 $(function(){
@@ -31,12 +24,8 @@ $(function(){
          $('#toTop').fadeOut();
         }
     });
-    $('#toTop').click(function() {
 
-        $('body,html').animate({scrollTop:0},1000);
-
-    });
-    $('.mouse').click(function(){
+    $('.mouse, nav a').click(function(){
         var link = $(this).attr('href');
         var coordinats = $(link).offset().top;
         $('html, body').animate({scrollTop:coordinats}, 1000);
