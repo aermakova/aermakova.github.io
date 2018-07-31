@@ -1,0 +1,572 @@
+@import url(../fonts/roboto-regular.css);
+@import url(../fonts/myriadpro-regular.css);
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?a09fx7");
+  src: url("../fonts/icomoon.eot?a09fx7#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?a09fx7") format("truetype"), url("../fonts/icomoon.woff?a09fx7") format("woff"), url("../fonts/icomoon.svg?a09fx7#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: icomoon !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-call:before {
+  content: "\e900"; }
+
+.icon-facebook:before {
+  content: "\e901"; }
+
+.icon-twitter:before {
+  content: "\e902"; }
+
+.icon-vk:before {
+  content: "\e903"; }
+
+body {
+  color: #000;
+  font-family: roboto-regular; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+p {
+  font-size: 14px; }
+
+img {
+  max-width: 100%; }
+
+.wrap {
+  overflow: hidden; }
+
+.center {
+  max-width: 990px;
+  min-width: 340px;
+  padding: 0 30px;
+  margin: 0 auto; }
+
+.header {
+  background: #1660bf;
+  height: 153px;
+  padding: 30px 0;
+  overflow: hidden; }
+  .header_logo {
+    width: 30%;
+    float: left; }
+  .header_title {
+    text-align: center;
+    font-size: 17px;
+    line-height: 33px;
+    text-transform: uppercase;
+    color: #fff;
+    float: left;
+    width: 45%; }
+    .header_title i {
+      display: inline-block;
+      padding: 0 5px;
+      line-height: 21px;
+      background: #fff;
+      color: #000;
+      font-weight: bold; }
+  .header_callback {
+    overflow: hidden;
+    width: 23%;
+    float: right; }
+  .header_btn {
+    color: #000; }
+
+.logo {
+  position: relative;
+  top: 20px; }
+
+.btn {
+  font-family: myriadpro-regular;
+  display: inline-block;
+  padding: 12px 15px 10px 15px;
+  background: #fcd019;
+  text-transform: uppercase;
+  border: none;
+  border-bottom: 2px solid #fcd019;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold; }
+  .btn:hover {
+    background: #faeb19;
+    border-bottom-color: #faeb19; }
+  .btn_white {
+    border-bottom: 2px solid #fff;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s; }
+  .btn_brown {
+    border-bottom: 2px solid #d9b51c;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s; }
+
+.callback_contact {
+  text-align: right;
+  font-size: 18px; }
+
+.callback_btn {
+  font-size: 14px;
+  clear: both;
+  text-align: right;
+  padding-top: 10px; }
+
+.callback_time {
+  float: left;
+  font-size: 12px;
+  color: #fff; }
+  .callback_time span {
+    display: block;
+    padding-top: 18px; }
+
+.contact_mail {
+  display: block;
+  line-height: 22px;
+  color: #fff; }
+  .contact_mail:hover {
+    text-decoration: underline;
+    color: #fcd019; }
+
+.contact_phone {
+  line-height: 22px;
+  color: #fff; }
+  .contact_phone span {
+    font-size: 12px; }
+
+.slide {
+  height: 430px;
+  padding-top: 55px; }
+  .slide_form {
+    width: 665px;
+    margin: auto;
+    text-align: center;
+    margin-top: -60px;
+    padding: 80px 90px 10px 90px; }
+  .slide_label {
+    padding: 30px;
+    width: 530px;
+    margin: auto; }
+
+.form {
+  background: rgba(0, 0, 0, 0.5); }
+  .form input {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    font-style: italic;
+    color: #878786;
+    background-color: #fff;
+    border: none;
+    width: 220px;
+    margin: 15px 10px; }
+    .form input:focus {
+      border: none; }
+  .form button {
+    min-height: 40px; }
+  .form_text {
+    font-size: 17px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 30px; }
+
+.label {
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center; }
+  .label_offer {
+    font-family: myriadpro-regular;
+    font-size: 29px;
+    line-height: 36px; }
+  .label span {
+    display: block;
+    font-size: 18px;
+    line-height: 22px; }
+  .label ins {
+    text-decoration: none;
+    color: #fcd019; }
+  .label_text {
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: none; }
+
+.section {
+  padding: 40px 0; }
+
+.title {
+  font-family: myriadpro-regular;
+  font-size: 30px;
+  line-height: 34px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 60px; }
+  .title_line {
+    background: #fcd019;
+    padding: 40px 0;
+    margin: 0 auto;
+    text-align: center;
+    position: relative; }
+    .title_line:before {
+      content: '';
+      position: absolute;
+      bottom: -59px;
+      left: 0;
+      right: 0;
+      width: 0px;
+      margin: auto;
+      border: 40px solid transparent;
+      border-top: 20px solid #fcd019; }
+    .title_line .title {
+      color: #545454; }
+  .title b {
+    font-weight: bold; }
+  .title i {
+    font-size: 24px; }
+
+.sub_title {
+  font-family: myriadpro-regular;
+  font-size: 14px;
+  line-height: 16px;
+  color: #1660bf; }
+
+.fact {
+  padding: 20px 0;
+  overflow: hidden; }
+  .fact_item {
+    float: left;
+    width: 24%;
+    text-align: center; }
+    .fact_item span {
+      font-size: 48px;
+      line-height: 50px;
+      color: #1660bf;
+      font-weight: bold;
+      min-height: 60px;
+      position: relative; }
+      .fact_item span sup {
+        position: absolute;
+        font-size: 30px;
+        top: -6px; }
+
+.product {
+  padding: 20px 0;
+  overflow: hidden; }
+  .product_item {
+    float: left;
+    width: 24%;
+    text-align: center;
+    margin: 25px 0; }
+  .product_img {
+    border: 1px solid #39abb9;
+    width: 115px;
+    height: 120px;
+    margin: auto;
+    -webkit-box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    margin-bottom: 10px; }
+    .product_img img {
+      margin: -1px; }
+  .product_name {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+    text-transform: uppercase; }
+  .product_category {
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase; }
+  .product_char {
+    font-size: 14px;
+    line-height: 30px; }
+  .product_price {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: bold; }
+    .product_price sup {
+      vertical-align: super;
+      font-size: 12px; }
+  .product_btn {
+    margin-top: 15px; }
+
+.circle {
+  background: url("../img/background-1.jpg") no-repeat center;
+  -webkit-background-size: cover;
+          background-size: cover; }
+  .circle_block {
+    width: 310px;
+    height: 310px;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    background: url("../img/ico-10.png") #1660bf no-repeat center;
+    background-position-y: 20px;
+    margin: auto;
+    padding: 120px 20px;
+    text-align: center; }
+  .circle_link {
+    font-family: myriadpro-regular;
+    font-size: 42px;
+    line-height: 46px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold; }
+    .circle_link ins {
+      font-size: 30px;
+      line-height: 36px;
+      display: block;
+      font-weight: normal;
+      text-decoration: none; }
+
+.advantage {
+  overflow: hidden;
+  margin: 0 -25px; }
+  .advantage_item {
+    padding: 80px 30px 0 30px;
+    float: left;
+    width: 22%;
+    text-align: center;
+    margin: 15px 14px;
+    min-height: 160px; }
+    .advantage_item b {
+      font-weight: bold; }
+    .advantage_item:nth-child(1) {
+      background: url("../img/ico-2.png") no-repeat center;
+      background-position-y: 5px;
+      -webkit-background-size: 100px 100px;
+              background-size: 100px; }
+    .advantage_item:nth-child(2) {
+      background: url("../img/ico-3.png") no-repeat center;
+      background-position-y: 5px;
+      -webkit-background-size: 100px 100px;
+              background-size: 100px; }
+    .advantage_item:nth-child(3) {
+      background: url("../img/ico-4.png") no-repeat center;
+      background-position-y: 5px;
+      -webkit-background-size: 100px 100px;
+              background-size: 100px; }
+    .advantage_item:nth-child(4) {
+      background: url("../img/ico-5.png") no-repeat center;
+      background-position-y: 5px;
+      -webkit-background-size: 100px 100px;
+              background-size: 100px; }
+    .advantage_item:nth-child(5) {
+      background: url("../img/ico-6.png") no-repeat center;
+      background-position-y: 5px;
+      -webkit-background-size: 100px 100px;
+              background-size: 100px; }
+    .advantage_item:nth-child(6) {
+      background: url("../img/ico-7.png") no-repeat center;
+      background-position-y: 5px;
+      -webkit-background-size: 100px 100px;
+              background-size: 100px; }
+    .advantage_item:nth-child(7) {
+      background: url("../img/ico-8.png") no-repeat center;
+      background-position-y: 5px;
+      -webkit-background-size: 100px 100px;
+              background-size: 100px; }
+    .advantage_item:nth-child(8) {
+      background: url("../img/ico-9.png") no-repeat center;
+      background-position-y: 5px;
+      -webkit-background-size: 100px 100px;
+              background-size: 100px; }
+
+.sale {
+  background: #1660bf; }
+  .sale_block {
+    padding: 0 170px;
+    text-align: center; }
+    .sale_block .title {
+      color: #fff; }
+  .sale_link {
+    font-size: 18px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #fff; }
+    .sale_link a {
+      font-size: 18px;
+      line-height: 40px;
+      text-transform: uppercase;
+      color: #fcd019;
+      text-decoration: underline; }
+      .sale_link a:hover {
+        text-decoration: none;
+        -webkit-transition: .4s;
+        -o-transition: .4s;
+        transition: .4s; }
+  .sale_btn {
+    margin: 15px 0 5px 0; }
+
+.review {
+  padding-bottom: 60px; }
+  .review_block {
+    padding-top: 30px;
+    padding-bottom: 20px; }
+  .review_item {
+    width: 670px;
+    margin: auto;
+    text-align: center; }
+  .review_photo {
+    display: block;
+    width: 120px;
+    margin: auto; }
+  .review_name {
+    padding: 10px 0;
+    font-size: 16px;
+    line-height: 20px;
+    display: block; }
+    .review_name b {
+      display: block;
+      font-weight: bold; }
+  .review_text {
+    font-family: myriadpro-regular;
+    padding: 10px 0;
+    font-size: 16px;
+    line-height: 20px;
+    font-style: italic; }
+
+.lastform {
+  background: url("../img/background-2.jpg") no-repeat center;
+  -webkit-background-size: cover;
+          background-size: cover;
+  overflow: hidden;
+  padding: 80px 0; }
+  .lastform_label {
+    float: left;
+    width: 60%;
+    text-align: center;
+    padding: 30px 20px;
+    background: url("../img/ico-11.png") #2e1005 no-repeat center;
+    -webkit-background-size: 200px 200px;
+            background-size: 200px; }
+    .lastform_label .label_offer {
+      padding-bottom: 100px; }
+    .lastform_label .label_text {
+      padding: 30px 65px 0 65px; }
+  .lastform_form {
+    float: left;
+    width: 40%;
+    text-align: center;
+    padding: 30px; }
+
+.contact_block {
+  height: 340px;
+  margin: 40px 0; }
+
+.contact_map {
+  width: 100%;
+  height: 100%; }
+  .contact_map #map {
+    width: 100%;
+    height: 100%; }
+
+.contact_adress {
+  width: 340px;
+  padding: 100px 0 10px 0;
+  margin: auto;
+  background: url("../img/ico-12.png") no-repeat center;
+  -webkit-background-size: 60px 60px;
+          background-size: 60px;
+  background-position-y: 0px;
+  color: #2e1005;
+  text-align: center; }
+  .contact_adress span {
+    font-size: 18px;
+    line-height: 20px; }
+  .contact_adress b {
+    display: block;
+    font-weight: bold; }
+  .contact_adress p {
+    padding-top: 20px; }
+
+.footer {
+  background: #454646;
+  overflow: hidden;
+  padding: 30px 0; }
+  .footer .header_logo {
+    width: 38%; }
+  .footer .callback {
+    float: left; }
+  .footer .callback_time span {
+    padding-top: 0; }
+
+.soc {
+  width: 20%;
+  float: right;
+  position: relative;
+  top: 10px;
+  text-align: right; }
+  .soc_link {
+    padding-bottom: 5px; }
+  .soc_item a:last-child i {
+    margin-right: 0; }
+  .soc_item i {
+    font-size: 25px;
+    color: #fff;
+    margin-right: 2px;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s; }
+    .soc_item i:hover {
+      color: #fcd019;
+      -webkit-transition: .4s;
+      -o-transition: .4s;
+      transition: .4s; }
+
+.slick-dots li button {
+  width: 14px;
+  height: 14px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  border: 2px solid #000; }
+  .slick-dots li button:before {
+    display: none; }
+
+.slick-dots li.slick-active button {
+  background: #000; }
