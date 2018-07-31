@@ -1,5 +1,6 @@
 $(function(){
     $('.review_block').slick({
+        arrows:false,
         dots: true,
         autoplay: true,
         slidesToShow: 1,
