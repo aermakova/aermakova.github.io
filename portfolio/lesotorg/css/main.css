@@ -176,6 +176,9 @@ img {
   outline: none;
   cursor: pointer;
   font-weight: bold; }
+  @media screen and (max-width: 640px) {
+    .btn {
+      padding: 12px 7px 10px 7px; } }
   .btn:hover {
     background: #faeb19;
     border-bottom-color: #faeb19; }
