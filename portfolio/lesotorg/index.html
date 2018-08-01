@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" href="css/libs.css">
+    <meta name="description" content="Лесоторг - производство и продажа пиломатериалов из ели и сосны" />
+    <meta name="keywords" content="Лесоторг - производство и продажа пиломатериалов из ели и сосны" />
+	<link rel="stylesheet" href="css/libs.min.css">
 	<link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.png">
+    <title>Лесоторг - производство и продажа пиломатериалов из ели и сосны</title>
 </head>
 <body>
     <div class="wrap">
@@ -21,7 +24,7 @@
                         <a href="" class="contact_phone"><span>+7 (499)</span> 390 82 38</a>
                     </div>
                     <div class="callback_btn">
-                        <a href="#" class="btn header_btn">заказать звонок</a>
+                        <a href="#" class="btn header_btn open_call" data-title="заказ звонка"><i class="icon-call"></i>заказать звонок</a>
                     </div>
                 </div>
             </div>
@@ -31,10 +34,10 @@
             <div class="slide_label label"><p class="label_offer"><span>закажите пробную партию</span>
                 и получите <ins>скидку до 30%</ins></p></div>
             <div class="slide_form form">
-                <form action="" title="">
-                    <input type="text" placeholder="Ваше имя">
-                    <input type="tel" placeholder="Ваш телефон">
-                    <button class="btn btn_white">отправить заявку сейчас!</button>
+                <form action="php/sendmail.php" data-them="Заявка на обратный звонок" data-show=".popup_thank, .popup_thank_bg" title="">
+                    <input type="text" name="name" data-name="Имя: " placeholder="Ваше имя">
+                    <input type="tel" name="phone" data-name="Телефон: " placeholder="Ваш телефон" data-required>
+                    <button class="btn btn_white" type="submit">отправить заявку сейчас!</button>
                 </form>
                 <p class="form_text">только качественные пиломатериалы</p>
             </div>
@@ -73,68 +76,60 @@
             <div class="center">
                 <ul class="product">
                     <li class="product_item">
-                        <div class="product_img"><img src="img/product-1.jpg" alt="" title=""></div>
-                        <h3 class="product_name">БРУС</h3>
-                        <div class="product_category">1 сорт</div>
+                        <div class="product_img"><img src="img/product-2.jpg" alt="" title=""></div>
+                        <h3 class="product_name">БРУС<span>1 сорт</span></h3>
                         <div class="product_char">3000-6000 х 100-200 х 100-200</div>
                         <div class="product_price">от 7 300 р/м<sup>3</sup></div>
-                        <a href="#" class="product_btn btn btn_brown">заказать</a>
+                        <a href="#" class="product_btn btn btn_brown open_order" data-title="БРУС" data-price="от 7 300 р/м3">заказать</a>
+                    </li>
+                    <li class="product_item">
+                        <div class="product_img"><img src="img/product-3.jpg" alt="" title=""></div>
+                        <h3 class="product_name">доска обрезная<span>1 сорт</span></h3>
+                        <div class="product_char">3000-6000 х 25-50 х 100-200</div>
+                        <div class="product_price">от 7 300 р/м<sup>3</sup></div>
+                        <a href="#" class="product_btn btn btn_brown open_order" data-title="доска обрезная" data-price="от 7 300 р/м3">заказать</a>
+                    </li>
+                    <li class="product_item">
+                        <div class="product_img"><img src="img/product-4.jpg" alt="" title=""></div>
+                        <h3 class="product_name">евровагонка</h3>
+                        <div class="product_char">6000 х 25 х 140</div>
+                        <div class="product_price">от 260 р/м<sup>2</sup></div>
+                        <a href="#" class="product_btn btn btn_brown open_order" data-title="евровагонка" data-price="от 260 р/м2">заказать</a>
+                    </li>
+                    <li class="product_item">
+                        <div class="product_img"><img src="img/product-5.jpg" alt="" title=""></div>
+                        <h3 class="product_name">Блокхаус</h3>
+                        <div class="product_char">6000 х 20-45 х 90-190</div>
+                        <div class="product_price">от 570 р/м<sup>2</sup></div>
+                        <a href="#" class="product_btn btn btn_brown open_order" data-title="Блокхаус" data-price="от 570 р/м2">заказать</a>
+                    </li>
+                    <li class="product_item">
+                        <div class="product_img"><img src="img/product-6.jpg" alt="" title=""></div>
+                        <h3 class="product_name">ПОЛОВАЯ ДОСКА</h3>
+                        <div class="product_char">3000-6000 х 36 х 120</div>
+                        <div class="product_price">от 9 700 р/м<sup>3</sup></div>
+                        <a href="#" class="product_btn btn btn_brown open_order" data-title="ПОЛОВАЯ ДОСКА" data-price="от 9 700 р/м3">заказать</a>
+                    </li>
+                    <li class="product_item">
+                        <div class="product_img"><img src="img/product-7.jpg" alt="" title=""></div>
+                        <h3 class="product_name">Строганая доска</h3>
+                        <div class="product_char">2000-6000 х 25 х 100</div>
+                        <div class="product_price">от 10 900 р/м<sup>2</sup></div>
+                        <a href="#" class="product_btn btn btn_brown open_order" data-title="Строганая доска" data-price="от 10 900 р/м2">заказать</a>
+                    </li>
+                    <li class="product_item">
+                        <div class="product_img"><img src="img/product-8.jpg" alt="" title=""></div>
+                        <h3 class="product_name">Брусок строганый</h3>
+                        <div class="product_char">3000 х 25 х 30</div>
+                        <div class="product_price">от 45 р/шт</div>
+                        <a href="#" class="product_btn btn btn_brown open_order" data-title="Брусок строганый" data-price="от 45 р/шт">заказать</a>
                     </li>
                     <li class="product_item">
                         <div class="product_img"><img src="img/product-1.jpg" alt="" title=""></div>
-                        <div class="product_name">БРУС</div>
-                        <div class="product_category">1 сорт</div>
-                        <div class="product_char">3000-6000 х 100-200 х 100-200</div>
-                        <div class="product_price">от 7 300 р/м<sup>3</sup></div>
-                        <a href="#" class="product_btn btn btn_brown">заказать</a>
-                    </li>
-                    <li class="product_item">
-                        <div class="product_img"><img src="img/product-1.jpg" alt="" title=""></div>
-                        <h3 class="product_name">БРУС</h3>
-                        <div class="product_category">1 сорт</div>
-                        <div class="product_char">3000-6000 х 100-200 х 100-200</div>
-                        <div class="product_price">от 7 300 р/м<sup>3</sup></div>
-                        <a href="#" class="product_btn btn btn_brown">заказать</a>
-                    </li>
-                    <li class="product_item">
-                        <div class="product_img"><img src="img/product-1.jpg" alt="" title=""></div>
-                        <h3 class="product_name">БРУС</h3>
-                        <div class="product_category">1 сорт</div>
-                        <div class="product_char">3000-6000 х 100-200 х 100-200</div>
-                        <div class="product_price">от 7 300 р/м<sup>3</sup></div>
-                        <a href="#" class="product_btn btn btn_brown">заказать</a>
-                    </li>
-                    <li class="product_item">
-                        <div class="product_img"><img src="img/product-1.jpg" alt="" title=""></div>
-                        <h3 class="product_name">БРУС</h3>
-                        <div class="product_category">1 сорт</div>
-                        <div class="product_char">3000-6000 х 100-200 х 100-200</div>
-                        <div class="product_price">от 7 300 р/м<sup>3</sup></div>
-                        <a href="#" class="product_btn btn btn_brown">заказать</a>
-                    </li>
-                    <li class="product_item">
-                        <div class="product_img"><img src="img/product-1.jpg" alt="" title=""></div>
-                        <h3 class="product_name">БРУС</h3>
-                        <div class="product_category">1 сорт</div>
-                        <div class="product_char">3000-6000 х 100-200 х 100-200</div>
-                        <div class="product_price">от 7 300 р/м<sup>3</sup></div>
-                        <a href="#" class="product_btn btn btn_brown">заказать</a>
-                    </li>
-                    <li class="product_item">
-                        <div class="product_img"><img src="img/product-1.jpg" alt="" title=""></div>
-                        <h3 class="product_name">БРУС</h3>
-                        <div class="product_category">1 сорт</div>
-                        <div class="product_char">3000-6000 х 100-200 х 100-200</div>
-                        <div class="product_price">от 7 300 р/м<sup>3</sup></div>
-                        <a href="#" class="product_btn btn btn_brown">заказать</a>
-                    </li>
-                    <li class="product_item">
-                        <div class="product_img"><img src="img/product-1.jpg" alt="" title=""></div>
-                        <h3 class="product_name">БРУС</h3>
-                        <div class="product_category">1 сорт</div>
-                        <div class="product_char">3000-6000 х 100-200 х 100-200</div>
-                        <div class="product_price">от 7 300 р/м<sup>3</sup></div>
-                        <a href="#" class="product_btn btn btn_brown">заказать</a>
+                        <h3 class="product_name">Имитация бруса</h3>
+                        <div class="product_char">3000 х 16 х 145</div>
+                        <div class="product_price">от 290 р/м<sup>3</sup></div>
+                        <a href="#" class="product_btn btn btn_brown open_order" data-title="Имитация бруса" data-price="от 290 р/м3">заказать</a>
                     </li>
                 </ul>
                 </div>
@@ -143,7 +138,7 @@
         <div class="section circle">
             <div class="center">
                 <div class="circle_block">
-                    <a href="#" class="circle_link"><ins>заказать</ins>прайс-лист</a>
+                    <a href="#" class="circle_link open_call" data-title="заказ прайс-листа"><ins>заказать</ins>прайс-лист</a>
                 </div>
             </div>
         </div>
@@ -168,8 +163,8 @@
             <div class="center">
                 <div class="sale_block">
                     <h2 class="title">используйте возможность <i>сделать заказ со скидкой <br>до</i> <b>30%</b></h2>
-                    <a href="#" class="btn sale_btn  btn_white">заказать со скидкой до 30%!</a>
-                    <div class="sale_link">или <a href="#">заказать звонок</a></div>
+                    <a href="#" class="btn sale_btn btn_white open_call" data-title="сделать заказ со скидкой до 30%!">заказать со скидкой до 30%!</a>
+                    <div class="sale_link">или <a href="#" class="open_call" data-title="заказ звонка">заказать звонок</a></div>
                 </div>
             </div>
         </section>
@@ -190,7 +185,7 @@
                     </li>
                     <li class="review_item">
                         <img src="img/photo-1.png"  class="review_photo" alt="" title="">
-                        <span class="review_name"><bПетров</b>Компания</span>
+                        <span class="review_name"><b>Петров</b>Компания</span>
                         <p class="review_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </li>
                     <li class="review_item">
@@ -209,10 +204,10 @@
                     <p class="label_text">Наши менеджеры в течении 45 минут сделают расчеты и предложат наилучшее решение ваших задач</p>
                 </div>
                 <div class="lastform_form form">
-                    <form action="" title="">
-                        <input type="text" placeholder="Ваше имя">
-                        <input type="tel" placeholder="Ваш телефон">
-                        <button class="btn btn_white">Получить расчет</button>
+                    <form action="php/sendmail.php" data-them="Заявка на обратный звонок" data-show=".popup_thank, .popup_thank_bg" title="" >
+                        <input type="text" name="name" data-name="Имя: " placeholder="Ваше имя">
+                        <input type="tel" name="phone" data-name="Телефон: " placeholder="Ваш телефон" data-required>
+                        <button class="btn btn_white" type="submit">Получить расчет</button>
                     </form>
                 </div>
             </div>
@@ -243,7 +238,7 @@
                         <a href="" class="contact_phone"><span>+7 (499)</span> 390 82 38</a>
                     </div>
                     <div class="callback_btn">
-                        <a href="#" class="btn">заказать звонок</a>
+                        <a href="#" class="btn open_call" data-title="заказ звонка"><i class="icon-call"></i>заказать звонок</a>
                     </div>
                 </div>
                 <div class="soc">
@@ -257,9 +252,49 @@
             </div>
         </footer>
     </div>
+
+    <div class="popup_order">
+        <div class="popup_close">×</div>
+        <p class="popup_title">Ваш заказ</p>
+        <p class="order_title">ДОСКА ОБРЕЗНАЯ</p>
+        <p class="order_price">от 7 300 р/м3</p>
+        <div class="popup_form form">
+            <form action="php/sendmail.php" data-them="Заказ с сайта" data-show=".popup_thank, .popup_thank_bg" data-hide=".popup_order, .popup_order_bg" title="">
+                <input type="text" name="name" data-name="Имя: " placeholder="Ваше имя">
+                <input type="tel" name="phone" data-name="Телефон: " placeholder="Ваш телефон" data-required>
+                <input type="hidden" name="order_title" data-name="Название: ">
+                <input type="hidden" name="order_price" data-name="Цена: ">
+                <button class="btn btn_white" type="submit">заказать</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup_call">
+        <div class="popup_close">×</div>
+        <p class="popup_title">Заявка на обратный звонок</p>
+        <div class="popup_form form">
+            <form action="php/sendmail.php" data-them="Заявка на обратный звонок" data-show=".popup_thank, .popup_thank_bg" data-hide=".popup_call, .popup_call_bg" title="">
+                <input type="text" name="name" data-name="Имя: " placeholder="Ваше имя">
+                <input type="tel" name="phone" data-name="Телефон: " placeholder="Ваш телефон" data-required>
+                <button class="btn btn_white" type="submit">отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup_thank">
+        <div class="thank_close">×</div>
+        <p class="popup_title">Мы благодарим Вас за то, что Вы оставили заявку.</p>
+        <p>Скоро наш менеджер свяжется с Вами по указанному номеру телефона.</p>
+        <p>Если у вас возникнут вопросы или пожелания - Вы всегда можете позвонить нам.</p>
+    </div>
+    <div class="popup_order_bg"></div>
+    <div class="popup_call_bg"></div>
+    <div class="popup_thank_bg"></div>
+
 	<script src="js/libs.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
     </script>
+    <script src="js/jquery.sendFormLP.js"></script>
     <script src="js/common.js"></script>
 
 </body>

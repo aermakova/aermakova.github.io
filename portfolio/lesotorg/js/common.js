@@ -1,9 +1,47 @@
 $(function(){
     $('.review_block').slick({
+        arrows: false,
         dots: true,
         autoplay: true,
         slidesToShow: 1,
         slidesToScroll: 1
+    });
+    $('.popup_thank').each(function(){
+        $('.thank_close, .popup_thank_bg').click(function(){
+            $('.popup_thank').fadeOut();
+            $('.popup_thank_bg').fadeOut();
+        });
+        return false
+    });
+    $('.open_order').click(function(){
+        $('.popup_order .order_title').text($(this).data('title'));
+        $('.popup_order .order_price').text($(this).data('price'));
+
+        $('.popup_order input[name="order_title"]').val($(this).data('title'));
+        $('.popup_order input[name="order_price"]').val($(this).data('price'));
+
+        $('.popup_order').fadeIn();
+        $('.popup_order_bg').fadeIn();
+
+        $('.popup_order_bg, .popup_close').click(function(){
+            $('.popup_order').fadeOut();
+            $('.popup_order_bg').fadeOut();
+        });
+        return false
+    });
+    $('.open_call').click(function(){
+        $('.popup_call .popup_title').text($(this).data('title'));
+
+        $('.popup_call input[name="popup_title"]').val($(this).data('title'));
+
+        $('.popup_call').fadeIn();
+        $('.popup_call_bg').fadeIn();
+
+        $('.popup_call_bg, .popup_close').click(function(){
+            $('.popup_call').fadeOut();
+            $('.popup_call_bg').fadeOut();
+        });
+        return false
     });
 });
 var backgrounds  = [
