@@ -75,8 +75,8 @@ ymaps.ready(function () {
     if (el != null) {
 
         var myMap = new ymaps.Map('map', {
-                center: [44.02375602, 42.87207249],
-                zoom: 14.5,
+                center: [55.61578478, 37.44836567],
+                zoom: 13,
                 controls: []
             }, {
                 searchControlProvider: 'yandex#search'
@@ -89,9 +89,9 @@ ymaps.ready(function () {
                 '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
             ),
 
-            myPlacemark = new ymaps.Placemark([44.02370957, 42.87029150], {
-                hintContent: 'ул. Этокская, д. 101в',
-                balloonContent: 'ул. Этокская, д. 101в'
+            myPlacemark = new ymaps.Placemark([55.61578478, 37.44836567], {
+                hintContent: 'Адмирала Корнилова',
+                balloonContent: 'Адмирала Корнилова'
             }, {
                 // Опции.
                 // Необходимо указать данный тип макета.
