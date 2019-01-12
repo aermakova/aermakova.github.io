@@ -470,7 +470,7 @@ img {
   position: relative;
   z-index: 1;
   background: #fff;
-  background: url(../img/ph-3.png) no-repeat center;
+  background: black;
   background-size: cover;
   padding: 50px 0;
 }
