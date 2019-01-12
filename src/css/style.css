@@ -1,3 +1,53 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?4iu9ma');
+  src:  url('fonts/icomoon.eot?4iu9ma#iefix') format('embedded-opentype'),
+  url('fonts/icomoon.ttf?4iu9ma') format('truetype'),
+  url('fonts/icomoon.woff?4iu9ma') format('woff'),
+  url('fonts/icomoon.svg?4iu9ma#icomoon') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  -webkit-font-feature-settings: normal;
+          font-feature-settings: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-github:before {
+  content: "\e904";
+}
+.icon-gmail:before {
+  content: "\e905";
+}
+.icon-instagram:before {
+  content: "\e906";
+}
+.icon-linkedin:before {
+  content: "\e907";
+}
+.icon-skype:before {
+  content: "\e908";
+}
+.icon-telegram:before {
+  content: "\e909";
+}
+.icon-viber:before {
+  content: "\e90a";
+}
+
 body{
   font-family: 'Muli', sans-serif;
 }
@@ -9,7 +59,6 @@ header{
   width: 100%;
   z-index: 2;
   padding: 20px 0;
-  background: rgba(0, 0, 0, .3);
 }
 p{
   font-size: 16px;
@@ -45,21 +94,18 @@ h2{
   text-decoration: none;
 }
 .logo span{
-  color: rgb(0, 157, 181);
+  color: rgb(48, 63, 24);
 }
 .menu_list{
-  position: fixed;
-  right: 0;
-  top: 0;
-  padding: 90px 20px 0 20px;
-  -webkit-transform: translate(100%);
-  transform: translate(100%);
-  -webkit-transition: .4s;
-  transition: .4s;
-  z-index: 5;
-  width: 300px;
-  height: 100%;
-  background: rgba(255, 255, 255, .8);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 .menu_list.active{
   -webkit-transform: translate(0px);
@@ -150,6 +196,47 @@ h2{
 .menu_toggle.active ins{
   opacity: 0;
 }
+.soc{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 20px;
+}
+.soc a{
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  -webkit-transition: .4s;
+  transition: .4s;
+  text-decoration: none;
+  position: relative;
+  margin: auto;
+  z-index: 1;
+  color: #000;
+}
+.soc a:after{
+  content: attr(data-title);
+  font-size: 12px;
+  color: rgba(0, 0, 0, .6);
+  position: absolute;
+  top: 35px;
+  display: inline-block;
+  display: none;
+  text-decoration: none;
+  width: 330px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.soc a:hover:after{
+  display: block;
+}
 .link{
     display: block;
     font-size: 25px;
@@ -220,6 +307,56 @@ h2{
     opacity: 1;
     -webkit-transform: translate(-1px,1px);
             transform: translate(-1px,1px);
+}
+.menu-wrap{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.main1 {
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.layer {
+  background-position: bottom center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+}
+.layer-1{
+  background: url("../img/macbook1.png") no-repeat center;
+}
+.layer-2{
+  background: url("../img/iphone.png") no-repeat;
+  background-position: 80% 200px;
+}
+.layer-3{
+  background: url("../img/flower-pot.png") no-repeat;
+  background-position: 200px 100px;
+}
+.layer-4{
+  background: url("../img/eyeglasses1.png") no-repeat;
+  background-position: 200px 100px;
+}
+.layer-bg{
+  background: url("../img/pen.png") no-repeat;
+  background-position: 95% 100px;
+  background-size: 125px;
+}
+.layer-overlay{
+  background: url("../img/watch.png") no-repeat;
+  background-position: 200px 100px;
 }
 .main{
   height: 100%;
@@ -418,6 +555,10 @@ img {
 .portfolio_card:hover img{
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="5" /></filter></svg>#filter');
+  filter: blur(5px);
+  -moz-filter: blur(5px);
+  -webkit-filter: blur(5px);
 }
 .portfolio_content{
   padding: 30px 10px;
@@ -470,7 +611,7 @@ img {
   position: relative;
   z-index: 1;
   background: #fff;
-  background: black;
+  background: url(../img/ph-3.png) no-repeat center;
   background-size: cover;
   padding: 50px 0;
 }
@@ -516,59 +657,8 @@ img {
   vertical-align: top;
   margin-right: 10px;
 }
-footer {
-  padding-bottom: 50px;
-  background: #e2bf01;
-  position: relative;
-  z-index: 1;
-  background: rgb(0, 157, 181);
-}
-footer .title{
-  padding: 40px 0 20px 0;
-  color: #fff;
-}
-footer .soc{
-  width: 40%;
-  margin: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: -moz-box;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding-top: 20px;
-}
-footer .soc a{
-  width: 30px;
-  height: 30px;
-  border-radius: 10px;
-  border: 1px solid transparent;
-  -webkit-transition: .4s;
-  transition: .4s;
-  text-decoration: none;
-  position: relative;
-  margin: auto;
-  z-index: 1;
-  color: #000;
-}
-footer .soc a:after{
-  content: attr(data-title);
-  font-size: 12px;
-  color: rgba(0, 0, 0, .6);
-  position: absolute;
-  top: 35px;
-  display: inline-block;
-  display: none;
-  text-decoration: none;
-  width: 330px;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-footer .soc a:hover:after{
-  display: block;
+.nicescroll-rails div {
+  background: #303f18!important;
 }
 @-webkit-keyframes colorSlide { 
   0% { background-position: 0% 100%; }
