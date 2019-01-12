@@ -12,7 +12,7 @@
   
   <div class="wrap">
 
-    <header class="menu">
+    <header class="menu"> 
       <div class="center">
         <a href="#" class="logo"><span>P</span>ortfolio</a>
         <div class="menu_wrap">
@@ -26,21 +26,17 @@
         </nav>
       </div>
     </header>
-
-    <section id="main" class="main">
-      <div class="main_content">
-        <div class="parralax">
-          <div class="parralax__layer layer1" data-type="parallax" data-depth="0.10"></div>
-          <div class="parralax__layer layer2" data-type="parallax" data-depth="0.20"></div>
-          <div class="parralax__layer layer3" data-type="parallax" data-depth="0.30"></div>
-          <div class="parralax__layer layer4" data-type="parallax" data-depth="0.40"></div>
-        </div>
-        <h1>Приветствую<ins>Вас!</ins></h1>
-        <h2>Меня зовут Ангелина</h2>
-        <p>и я занимаюсь версткой сайтов</p>
-        <a href="#portfolio" class="mouse"></a>
-      </div>
-    </section>
+    <div class="parralax-wrap">
+        <section id="parralax" class="parralax">
+            <div class="parralax__layer layer-4" data-type="parallax" data-depth="0.10"></div>
+            <div class="parralax__layer layer-3" data-type="parallax" data-depth="0.20"></div>
+            <div class="parralax__layer layer-2" data-type="parallax" data-depth="0.30"></div>
+            <div class="parralax__layer layer-1" data-type="parallax" data-depth="0.90"></div>
+          
+        </section>
+    </div>
+    
+    <a href="#portfolio" class="mouse"></a>
 
     <section id="portfolio" class="portfolio">
       <div class="center">
@@ -202,7 +198,7 @@
 
   </div>
 
-  <!-- <script src="js/jquery-1.7.2.min.js"></script> -->
-  <!-- <script src="js/scripts.js"></script> -->
+  <script src="js/jquery-1.7.2.min.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
 </html>
